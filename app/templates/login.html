@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block container %}
+
+<form class='login' action="" method="post" name="login">
+	Please enter your nickname:
+	{{form.hidden_tag()}}
+	<div class='row'>
+		<p>
+			{{form.nickname(size=50)}}
+			{%for error in form.errors.nickname %}
+			<span style="color: red;"> [{{error}}] </span>
+			{%endfor%} 
+		</p>
+	
+		<p> <input type='submit' value = 'Sing In'></p>
+	</div>
+	<p> {{form.remember_me}} Remember Me </p>
+</form>
+
+{% endblock %}

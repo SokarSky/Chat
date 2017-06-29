@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block container %}
+
+<form class='login' action="" method="post" name="password">
+	Hi, {{nickname}}. Enter password:
+	{{form.hidden_tag()}}
+
+	<p>
+		{{form.password()}}
+		{%for error in form.errors.password %}
+		<span style="color: red;"> [{{error}}] </span>
+		{%endfor%} 
+		Repeat Password
+		{{form.repeatPassword()}}
+		{%for error in form.errors.repeatPassword %}
+		<span style="color: red;"> [{{error}}] </span>
+		{%endfor%} 
+	</p>
+	<p> <input type='submit' value = 'Enter'></p>
+</form>
+
+{% endblock %}
