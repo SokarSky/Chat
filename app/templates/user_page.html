@@ -258,6 +258,9 @@ pre {
 	
 	<div class='container row'>
 		<div class='tab'>
+			<form id="logout" method="GET" action='/logout'>
+				<input style="background-color: red; width:100%;" type="submit" value="Logout">
+			</form>
 			<h1>Rooms:</h1>
 			<form class='row' id="create_room" method="POST" action='#'>
 				<input type='text' name='name_room' id='name_room' placeholder='Name room' autocomplete="off">

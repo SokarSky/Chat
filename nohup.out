@@ -1,0 +1,1062 @@
+/var/www/chat/venv/lib/python3.5/site-packages/flask_sqlalchemy/__init__.py:839: FSADeprecationWarning: SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and will be disabled by default in the future.  Set it to True or False to suppress this warning.
+  'SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and '
+WebSocket transport not available. Install eventlet or gevent and gevent-websocket for improved performance.
+ * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+ * Restarting with stat
+/var/www/chat/venv/lib/python3.5/site-packages/flask_sqlalchemy/__init__.py:839: FSADeprecationWarning: SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and will be disabled by default in the future.  Set it to True or False to suppress this warning.
+  'SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and '
+WebSocket transport not available. Install eventlet or gevent and gevent-websocket for improved performance.
+ * Debugger is active!
+ * Debugger PIN: 108-823-978
+91.214.247.253 - - [29/Jun/2017 10:03:53] "GET /socket.io/?EIO=3&transport=polling&t=1498745032028-66 HTTP/1.1" 200 -
+message handler error
+Traceback (most recent call last):
+  File "/var/www/chat/venv/lib/python3.5/site-packages/engineio/server.py", line 392, in _trigger_event
+    return self.handlers[event](*args)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/socketio/server.py", line 509, in _handle_eio_message
+    self._handle_connect(sid, pkt.namespace)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/socketio/server.py", line 414, in _handle_connect
+    self.environ[sid]) is False:
+  File "/var/www/chat/venv/lib/python3.5/site-packages/socketio/server.py", line 481, in _trigger_event
+    return self.handlers[namespace][event](*args)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/flask_socketio/__init__.py", line 224, in _handler
+    *args)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/flask_socketio/__init__.py", line 589, in _handle_event
+    ret = handler()
+  File "/var/www/chat/app/views.py", line 137, in test_connect
+    for c in current_user.chats:
+  File "/var/www/chat/venv/lib/python3.5/site-packages/werkzeug/local.py", line 347, in __getattr__
+    return getattr(self._get_current_object(), name)
+AttributeError: 'AnonymousUserMixin' object has no attribute 'chats'
+91.214.247.253 - - [29/Jun/2017 10:03:54] "POST /socket.io/?EIO=3&transport=polling&t=1498745033365-67&sid=bf97c1ccd5ff49d2872dd63a2853fd87 HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:04:05] "GET /index/ HTTP/1.1" 302 -
+91.214.247.253 - - [29/Jun/2017 10:04:05] "GET /login/?next=%2Findex%2F HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:04:11] "POST /login/?next=%2Findex%2F HTTP/1.1" 302 -
+91.214.247.253 - - [29/Jun/2017 10:04:11] "GET /registry/Sokar HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:04:18] "POST /registry/Sokar HTTP/1.1" 302 -
+91.214.247.253 - - [29/Jun/2017 10:04:19] "GET /index/ HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:04:19] "GET /socket.io/?EIO=3&transport=polling&t=1498745058592-0 HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:04:19] "POST /socket.io/?EIO=3&transport=polling&t=1498745058804-1&sid=6e70cffef8654412b451038938688eaf HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:04:19] "GET /socket.io/?EIO=3&transport=polling&t=1498745058809-2&sid=6e70cffef8654412b451038938688eaf HTTP/1.1" 200 -
+message handler error
+Traceback (most recent call last):
+  File "/var/www/chat/venv/lib/python3.5/site-packages/engineio/server.py", line 392, in _trigger_event
+    return self.handlers[event](*args)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/socketio/server.py", line 513, in _handle_eio_message
+    self._handle_event(sid, pkt.namespace, pkt.id, pkt.data)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/socketio/server.py", line 449, in _handle_event
+    self._handle_event_internal(self, sid, data, namespace, id)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/socketio/server.py", line 452, in _handle_event_internal
+    r = server._trigger_event(data[0], namespace, sid, *data[1:])
+  File "/var/www/chat/venv/lib/python3.5/site-packages/socketio/server.py", line 481, in _trigger_event
+    return self.handlers[namespace][event](*args)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/flask_socketio/__init__.py", line 224, in _handler
+    *args)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/flask_socketio/__init__.py", line 591, in _handle_event
+    ret = handler(*args)
+  File "/var/www/chat/app/views.py", line 151, in create_room
+    writeLog(current_user.nickname, datetime, "", str(room.id))
+  File "/var/www/chat/app/views.py", line 181, in writeLog
+    logFile = open("log/"+room+".log", "ab")
+FileNotFoundError: [Errno 2] No such file or directory: 'log/1.log'
+91.214.247.253 - - [29/Jun/2017 10:04:27] "POST /socket.io/?EIO=3&transport=polling&t=1498745066673-4&sid=6e70cffef8654412b451038938688eaf HTTP/1.1" 200 -
+message handler error
+Traceback (most recent call last):
+  File "/var/www/chat/venv/lib/python3.5/site-packages/engineio/server.py", line 392, in _trigger_event
+    return self.handlers[event](*args)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/socketio/server.py", line 513, in _handle_eio_message
+    self._handle_event(sid, pkt.namespace, pkt.id, pkt.data)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/socketio/server.py", line 449, in _handle_event
+    self._handle_event_internal(self, sid, data, namespace, id)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/socketio/server.py", line 452, in _handle_event_internal
+    r = server._trigger_event(data[0], namespace, sid, *data[1:])
+  File "/var/www/chat/venv/lib/python3.5/site-packages/socketio/server.py", line 481, in _trigger_event
+    return self.handlers[namespace][event](*args)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/flask_socketio/__init__.py", line 224, in _handler
+    *args)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/flask_socketio/__init__.py", line 591, in _handle_event
+    ret = handler(*args)
+  File "/var/www/chat/app/views.py", line 151, in create_room
+    writeLog(current_user.nickname, datetime, "", str(room.id))
+  File "/var/www/chat/app/views.py", line 181, in writeLog
+    logFile = open("log/"+room+".log", "ab")
+FileNotFoundError: [Errno 2] No such file or directory: 'log/2.log'
+91.214.247.253 - - [29/Jun/2017 10:04:33] "POST /socket.io/?EIO=3&transport=polling&t=1498745072874-5&sid=6e70cffef8654412b451038938688eaf HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:04:41] "GET /index/ HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:04:41] "GET /socket.io/?EIO=3&transport=polling&t=1498745080818-0 HTTP/1.1" 200 -
+message handler error
+Traceback (most recent call last):
+  File "/var/www/chat/venv/lib/python3.5/site-packages/engineio/server.py", line 392, in _trigger_event
+    return self.handlers[event](*args)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/socketio/server.py", line 509, in _handle_eio_message
+    self._handle_connect(sid, pkt.namespace)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/socketio/server.py", line 414, in _handle_connect
+    self.environ[sid]) is False:
+  File "/var/www/chat/venv/lib/python3.5/site-packages/socketio/server.py", line 481, in _trigger_event
+    return self.handlers[namespace][event](*args)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/flask_socketio/__init__.py", line 224, in _handler
+    *args)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/flask_socketio/__init__.py", line 589, in _handle_event
+    ret = handler()
+  File "/var/www/chat/app/views.py", line 139, in test_connect
+    string=readLog(str(c.chat.id))
+  File "/var/www/chat/app/views.py", line 188, in readLog
+    logFile = open("log/"+room+".log", "rb")
+FileNotFoundError: [Errno 2] No such file or directory: 'log/1.log'
+91.214.247.253 - - [29/Jun/2017 10:04:41] "POST /socket.io/?EIO=3&transport=polling&t=1498745080907-1&sid=b2a291b5b4f84fa688bbd68c9f345ea1 HTTP/1.1" 200 -
+/var/www/chat/venv/lib/python3.5/site-packages/werkzeug/filesystem.py:63: BrokenFilesystemWarning: Detected a misconfigured UNIX filesystem: Will use UTF-8 as filesystem encoding instead of 'ascii'
+  BrokenFilesystemWarning)
+91.214.247.253 - - [29/Jun/2017 10:04:54] "GET /socket.io/?EIO=3&transport=polling&t=1498745033369-68&sid=bf97c1ccd5ff49d2872dd63a2853fd87 HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/var/www/chat/venv/lib/python3.5/site-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/flask_socketio/__init__.py", line 42, in __call__
+    start_response)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/engineio/middleware.py", line 47, in __call__
+    return self.engineio_app.handle_request(environ, start_response)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/socketio/server.py", line 353, in handle_request
+    return self.eio.handle_request(environ, start_response)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/engineio/server.py", line 268, in handle_request
+    self.disconnect(sid)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/engineio/server.py", line 202, in disconnect
+    self._get_socket(sid).close()
+  File "/var/www/chat/venv/lib/python3.5/site-packages/engineio/server.py", line 408, in _get_socket
+    raise KeyError('Session is disconnected')
+KeyError: 'Session is disconnected'
+91.214.247.253 - - [29/Jun/2017 10:05:06] "POST /socket.io/?EIO=3&transport=polling&t=1498745105908-3&sid=b2a291b5b4f84fa688bbd68c9f345ea1 HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:05:06] "GET /socket.io/?EIO=3&transport=polling&t=1498745080910-2&sid=b2a291b5b4f84fa688bbd68c9f345ea1 HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:05:11] "GET /login HTTP/1.1" 301 -
+91.214.247.253 - - [29/Jun/2017 10:05:11] "GET /login/ HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:05:16] "POST /login/ HTTP/1.1" 302 -
+91.214.247.253 - - [29/Jun/2017 10:05:16] "GET /registry/Test HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:05:19] "GET /socket.io/?EIO=3&transport=polling&t=1498745058893-3&sid=6e70cffef8654412b451038938688eaf HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/var/www/chat/venv/lib/python3.5/site-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/flask_socketio/__init__.py", line 42, in __call__
+    start_response)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/engineio/middleware.py", line 47, in __call__
+    return self.engineio_app.handle_request(environ, start_response)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/socketio/server.py", line 353, in handle_request
+    return self.eio.handle_request(environ, start_response)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/engineio/server.py", line 268, in handle_request
+    self.disconnect(sid)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/engineio/server.py", line 202, in disconnect
+    self._get_socket(sid).close()
+  File "/var/www/chat/venv/lib/python3.5/site-packages/engineio/server.py", line 408, in _get_socket
+    raise KeyError('Session is disconnected')
+KeyError: 'Session is disconnected'
+91.214.247.253 - - [29/Jun/2017 10:05:20] "POST /registry/Test HTTP/1.1" 302 -
+91.214.247.253 - - [29/Jun/2017 10:05:20] "GET /index/ HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:05:21] "GET /socket.io/?EIO=3&transport=polling&t=1498745120748-0 HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:05:21] "POST /socket.io/?EIO=3&transport=polling&t=1498745120840-1&sid=827c5356fafd4061879476965ca74088 HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:05:21] "GET /socket.io/?EIO=3&transport=polling&t=1498745120846-2&sid=827c5356fafd4061879476965ca74088 HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:05:31] "POST /socket.io/?EIO=3&transport=polling&t=1498745130988-5&sid=b2a291b5b4f84fa688bbd68c9f345ea1 HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:05:31] "GET /socket.io/?EIO=3&transport=polling&t=1498745105987-4&sid=b2a291b5b4f84fa688bbd68c9f345ea1 HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:05:42] "GET /index/ HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:05:43] "GET /socket.io/?EIO=3&transport=polling&t=1498745142765-0 HTTP/1.1" 200 -
+message handler error
+Traceback (most recent call last):
+  File "/var/www/chat/venv/lib/python3.5/site-packages/engineio/server.py", line 392, in _trigger_event
+    return self.handlers[event](*args)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/socketio/server.py", line 509, in _handle_eio_message
+    self._handle_connect(sid, pkt.namespace)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/socketio/server.py", line 414, in _handle_connect
+    self.environ[sid]) is False:
+  File "/var/www/chat/venv/lib/python3.5/site-packages/socketio/server.py", line 481, in _trigger_event
+    return self.handlers[namespace][event](*args)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/flask_socketio/__init__.py", line 224, in _handler
+    *args)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/flask_socketio/__init__.py", line 589, in _handle_event
+    ret = handler()
+  File "/var/www/chat/app/views.py", line 139, in test_connect
+    string=readLog(str(c.chat.id))
+  File "/var/www/chat/app/views.py", line 188, in readLog
+    logFile = open("log/"+room+".log", "rb")
+FileNotFoundError: [Errno 2] No such file or directory: 'log/1.log'
+91.214.247.253 - - [29/Jun/2017 10:05:43] "POST /socket.io/?EIO=3&transport=polling&t=1498745142934-1&sid=042d97cc917c4088bb1a1c78a4450be9 HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:05:46] "POST /socket.io/?EIO=3&transport=polling&t=1498745145844-4&sid=827c5356fafd4061879476965ca74088 HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:05:46] "GET /socket.io/?EIO=3&transport=polling&t=1498745120928-3&sid=827c5356fafd4061879476965ca74088 HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:05:48] "GET /index/ HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:05:48] "GET /socket.io/?EIO=3&transport=polling&t=1498745147918-0 HTTP/1.1" 200 -
+message handler error
+Traceback (most recent call last):
+  File "/var/www/chat/venv/lib/python3.5/site-packages/engineio/server.py", line 392, in _trigger_event
+    return self.handlers[event](*args)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/socketio/server.py", line 509, in _handle_eio_message
+    self._handle_connect(sid, pkt.namespace)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/socketio/server.py", line 414, in _handle_connect
+    self.environ[sid]) is False:
+  File "/var/www/chat/venv/lib/python3.5/site-packages/socketio/server.py", line 481, in _trigger_event
+    return self.handlers[namespace][event](*args)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/flask_socketio/__init__.py", line 224, in _handler
+    *args)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/flask_socketio/__init__.py", line 589, in _handle_event
+    ret = handler()
+  File "/var/www/chat/app/views.py", line 139, in test_connect
+    string=readLog(str(c.chat.id))
+  File "/var/www/chat/app/views.py", line 188, in readLog
+    logFile = open("log/"+room+".log", "rb")
+FileNotFoundError: [Errno 2] No such file or directory: 'log/1.log'
+91.214.247.253 - - [29/Jun/2017 10:05:48] "POST /socket.io/?EIO=3&transport=polling&t=1498745148248-1&sid=30411548b445479fa0a773de6115867c HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:06:11] "POST /socket.io/?EIO=3&transport=polling&t=1498745170923-6&sid=827c5356fafd4061879476965ca74088 HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:06:11] "GET /socket.io/?EIO=3&transport=polling&t=1498745145923-5&sid=827c5356fafd4061879476965ca74088 HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:06:13] "POST /socket.io/?EIO=3&transport=polling&t=1498745173251-3&sid=30411548b445479fa0a773de6115867c HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:06:13] "GET /socket.io/?EIO=3&transport=polling&t=1498745148253-2&sid=30411548b445479fa0a773de6115867c HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:06:31] "GET /socket.io/?EIO=3&transport=polling&t=1498745131071-6&sid=b2a291b5b4f84fa688bbd68c9f345ea1 HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/var/www/chat/venv/lib/python3.5/site-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/flask_socketio/__init__.py", line 42, in __call__
+    start_response)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/engineio/middleware.py", line 47, in __call__
+    return self.engineio_app.handle_request(environ, start_response)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/socketio/server.py", line 353, in handle_request
+    return self.eio.handle_request(environ, start_response)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/engineio/server.py", line 268, in handle_request
+    self.disconnect(sid)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/engineio/server.py", line 202, in disconnect
+    self._get_socket(sid).close()
+  File "/var/www/chat/venv/lib/python3.5/site-packages/engineio/server.py", line 408, in _get_socket
+    raise KeyError('Session is disconnected')
+KeyError: 'Session is disconnected'
+91.214.247.253 - - [29/Jun/2017 10:06:36] "POST /socket.io/?EIO=3&transport=polling&t=1498745196002-8&sid=827c5356fafd4061879476965ca74088 HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:06:36] "GET /socket.io/?EIO=3&transport=polling&t=1498745171001-7&sid=827c5356fafd4061879476965ca74088 HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:06:39] "POST /socket.io/?EIO=3&transport=polling&t=1498745198340-5&sid=30411548b445479fa0a773de6115867c HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:06:39] "GET /socket.io/?EIO=3&transport=polling&t=1498745173340-4&sid=30411548b445479fa0a773de6115867c HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:06:43] "GET /socket.io/?EIO=3&transport=polling&t=1498745142970-2&sid=042d97cc917c4088bb1a1c78a4450be9 HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/var/www/chat/venv/lib/python3.5/site-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/flask_socketio/__init__.py", line 42, in __call__
+    start_response)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/engineio/middleware.py", line 47, in __call__
+    return self.engineio_app.handle_request(environ, start_response)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/socketio/server.py", line 353, in handle_request
+    return self.eio.handle_request(environ, start_response)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/engineio/server.py", line 268, in handle_request
+    self.disconnect(sid)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/engineio/server.py", line 202, in disconnect
+    self._get_socket(sid).close()
+  File "/var/www/chat/venv/lib/python3.5/site-packages/engineio/server.py", line 408, in _get_socket
+    raise KeyError('Session is disconnected')
+KeyError: 'Session is disconnected'
+91.214.247.253 - - [29/Jun/2017 10:07:01] "POST /socket.io/?EIO=3&transport=polling&t=1498745221078-10&sid=827c5356fafd4061879476965ca74088 HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:07:01] "GET /socket.io/?EIO=3&transport=polling&t=1498745196078-9&sid=827c5356fafd4061879476965ca74088 HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:07:04] "POST /socket.io/?EIO=3&transport=polling&t=1498745223422-7&sid=30411548b445479fa0a773de6115867c HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:07:04] "GET /socket.io/?EIO=3&transport=polling&t=1498745198423-6&sid=30411548b445479fa0a773de6115867c HTTP/1.1" 200 -
+/var/www/chat/venv/lib/python3.5/site-packages/flask_sqlalchemy/__init__.py:839: FSADeprecationWarning: SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and will be disabled by default in the future.  Set it to True or False to suppress this warning.
+  'SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and '
+WebSocket transport not available. Install eventlet or gevent and gevent-websocket for improved performance.
+ * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+ * Restarting with stat
+/var/www/chat/venv/lib/python3.5/site-packages/flask_sqlalchemy/__init__.py:839: FSADeprecationWarning: SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and will be disabled by default in the future.  Set it to True or False to suppress this warning.
+  'SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and '
+WebSocket transport not available. Install eventlet or gevent and gevent-websocket for improved performance.
+ * Debugger is active!
+ * Debugger PIN: 224-668-744
+91.214.247.253 - - [29/Jun/2017 10:15:35] "GET /socket.io/?EIO=3&transport=polling&t=1498745735032-15 HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:15:35] "POST /socket.io/?EIO=3&transport=polling&t=1498745735115-16&sid=a1af7ebdcc1041749e551587c2267836 HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:15:35] "GET /socket.io/?EIO=3&transport=polling&t=1498745735117-17&sid=a1af7ebdcc1041749e551587c2267836 HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:15:38] "GET /socket.io/?EIO=3&transport=polling&t=1498745738034-12 HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:15:38] "POST /socket.io/?EIO=3&transport=polling&t=1498745738111-13&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:15:38] "GET /socket.io/?EIO=3&transport=polling&t=1498745738112-14&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:15:38] "GET /socket.io/?EIO=3&transport=polling&t=1498745738203-15&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:15:45] "GET /index/ HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:15:45] "GET /socket.io/?EIO=3&transport=polling&t=1498745744697-0 HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:15:45] "POST /socket.io/?EIO=3&transport=polling&t=1498745744920-1&sid=e1821998087b41759b55b0b612a880fa HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:15:45] "GET /socket.io/?EIO=3&transport=polling&t=1498745744922-2&sid=e1821998087b41759b55b0b612a880fa HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:15:49] "POST /socket.io/?EIO=3&transport=polling&t=1498745748758-4&sid=e1821998087b41759b55b0b612a880fa HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:15:49] "GET /socket.io/?EIO=3&transport=polling&t=1498745745038-3&sid=e1821998087b41759b55b0b612a880fa HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:15:49] "GET /index/ HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:15:49] "GET /socket.io/?EIO=3&transport=polling&t=1498745749101-0 HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:15:50] "POST /socket.io/?EIO=3&transport=polling&t=1498745749327-1&sid=94a3bfc40c734826b3f50e6175aeab88 HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:15:50] "GET /socket.io/?EIO=3&transport=polling&t=1498745749329-2&sid=94a3bfc40c734826b3f50e6175aeab88 HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:16:00] "GET /socket.io/?EIO=3&transport=polling&t=1498745749427-3&sid=94a3bfc40c734826b3f50e6175aeab88 HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:16:00] "POST /socket.io/?EIO=3&transport=polling&t=1498745759868-4&sid=94a3bfc40c734826b3f50e6175aeab88 HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:16:00] "GET /index/ HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:16:01] "GET /socket.io/?EIO=3&transport=polling&t=1498745760475-0 HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:16:01] "POST /socket.io/?EIO=3&transport=polling&t=1498745760568-1&sid=6ac5b2f77bc84b0bbbb8f991413e611e HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:16:01] "GET /socket.io/?EIO=3&transport=polling&t=1498745760572-2&sid=6ac5b2f77bc84b0bbbb8f991413e611e HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:16:04] "POST /socket.io/?EIO=3&transport=polling&t=1498745764034-17&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:16:04] "GET /socket.io/?EIO=3&transport=polling&t=1498745738289-16&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+5.254.65.100 - - [29/Jun/2017 10:16:27] "POST /socket.io/?EIO=3&transport=polling&t=1498745786031-4&sid=6ac5b2f77bc84b0bbbb8f991413e611e HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:16:27] "GET /socket.io/?EIO=3&transport=polling&t=1498745760683-3&sid=6ac5b2f77bc84b0bbbb8f991413e611e HTTP/1.1" 200 -
+5.254.65.100 - - [29/Jun/2017 10:16:31] "POST /socket.io/?EIO=3&transport=polling&t=1498745790034-19&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:16:31] "GET /socket.io/?EIO=3&transport=polling&t=1498745764116-18&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+/var/www/chat/venv/lib/python3.5/site-packages/werkzeug/filesystem.py:63: BrokenFilesystemWarning: Detected a misconfigured UNIX filesystem: Will use UTF-8 as filesystem encoding instead of 'ascii'
+  BrokenFilesystemWarning)
+91.214.247.253 - - [29/Jun/2017 10:16:35] "GET /socket.io/?EIO=3&transport=polling&t=1498745735231-18&sid=a1af7ebdcc1041749e551587c2267836 HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/var/www/chat/venv/lib/python3.5/site-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/flask_socketio/__init__.py", line 42, in __call__
+    start_response)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/engineio/middleware.py", line 47, in __call__
+    return self.engineio_app.handle_request(environ, start_response)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/socketio/server.py", line 353, in handle_request
+    return self.eio.handle_request(environ, start_response)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/engineio/server.py", line 268, in handle_request
+    self.disconnect(sid)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/engineio/server.py", line 202, in disconnect
+    self._get_socket(sid).close()
+  File "/var/www/chat/venv/lib/python3.5/site-packages/engineio/server.py", line 408, in _get_socket
+    raise KeyError('Session is disconnected')
+KeyError: 'Session is disconnected'
+91.214.247.253 - - [29/Jun/2017 10:16:49] "GET /socket.io/?EIO=3&transport=polling&t=1498745748888-5&sid=e1821998087b41759b55b0b612a880fa HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/var/www/chat/venv/lib/python3.5/site-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/flask_socketio/__init__.py", line 42, in __call__
+    start_response)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/engineio/middleware.py", line 47, in __call__
+    return self.engineio_app.handle_request(environ, start_response)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/socketio/server.py", line 353, in handle_request
+    return self.eio.handle_request(environ, start_response)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/engineio/server.py", line 268, in handle_request
+    self.disconnect(sid)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/engineio/server.py", line 202, in disconnect
+    self._get_socket(sid).close()
+  File "/var/www/chat/venv/lib/python3.5/site-packages/engineio/server.py", line 408, in _get_socket
+    raise KeyError('Session is disconnected')
+KeyError: 'Session is disconnected'
+5.254.65.100 - - [29/Jun/2017 10:16:53] "POST /socket.io/?EIO=3&transport=polling&t=1498745812032-6&sid=6ac5b2f77bc84b0bbbb8f991413e611e HTTP/1.1" 200 -
+5.254.65.100 - - [29/Jun/2017 10:16:53] "GET /socket.io/?EIO=3&transport=polling&t=1498745786862-5&sid=6ac5b2f77bc84b0bbbb8f991413e611e HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:16:56] "POST /socket.io/?EIO=3&transport=polling&t=1498745816034-21&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+5.254.65.100 - - [29/Jun/2017 10:16:56] "GET /socket.io/?EIO=3&transport=polling&t=1498745790738-20&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:17:00] "GET /socket.io/?EIO=3&transport=polling&t=1498745760004-5&sid=94a3bfc40c734826b3f50e6175aeab88 HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/var/www/chat/venv/lib/python3.5/site-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/flask_socketio/__init__.py", line 42, in __call__
+    start_response)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/engineio/middleware.py", line 47, in __call__
+    return self.engineio_app.handle_request(environ, start_response)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/socketio/server.py", line 353, in handle_request
+    return self.eio.handle_request(environ, start_response)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/engineio/server.py", line 268, in handle_request
+    self.disconnect(sid)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/engineio/server.py", line 202, in disconnect
+    self._get_socket(sid).close()
+  File "/var/www/chat/venv/lib/python3.5/site-packages/engineio/server.py", line 408, in _get_socket
+    raise KeyError('Session is disconnected')
+KeyError: 'Session is disconnected'
+91.214.247.253 - - [29/Jun/2017 10:17:18] "POST /socket.io/?EIO=3&transport=polling&t=1498745838032-8&sid=6ac5b2f77bc84b0bbbb8f991413e611e HTTP/1.1" 200 -
+5.254.65.100 - - [29/Jun/2017 10:17:18] "GET /socket.io/?EIO=3&transport=polling&t=1498745812564-7&sid=6ac5b2f77bc84b0bbbb8f991413e611e HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:17:22] "POST /socket.io/?EIO=3&transport=polling&t=1498745842034-23&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:17:22] "GET /socket.io/?EIO=3&transport=polling&t=1498745816170-22&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:17:44] "POST /socket.io/?EIO=3&transport=polling&t=1498745864032-10&sid=6ac5b2f77bc84b0bbbb8f991413e611e HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:17:44] "GET /socket.io/?EIO=3&transport=polling&t=1498745838212-9&sid=6ac5b2f77bc84b0bbbb8f991413e611e HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:17:48] "POST /socket.io/?EIO=3&transport=polling&t=1498745868034-25&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:17:48] "GET /socket.io/?EIO=3&transport=polling&t=1498745842130-24&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:18:10] "POST /socket.io/?EIO=3&transport=polling&t=1498745890032-12&sid=6ac5b2f77bc84b0bbbb8f991413e611e HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:18:10] "GET /socket.io/?EIO=3&transport=polling&t=1498745864113-11&sid=6ac5b2f77bc84b0bbbb8f991413e611e HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:18:14] "POST /socket.io/?EIO=3&transport=polling&t=1498745894035-27&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:18:14] "GET /socket.io/?EIO=3&transport=polling&t=1498745868112-26&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:18:36] "POST /socket.io/?EIO=3&transport=polling&t=1498745916032-14&sid=6ac5b2f77bc84b0bbbb8f991413e611e HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:18:36] "GET /socket.io/?EIO=3&transport=polling&t=1498745890228-13&sid=6ac5b2f77bc84b0bbbb8f991413e611e HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:18:40] "POST /socket.io/?EIO=3&transport=polling&t=1498745920034-29&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:18:40] "GET /socket.io/?EIO=3&transport=polling&t=1498745894211-28&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:19:02] "POST /socket.io/?EIO=3&transport=polling&t=1498745942036-16&sid=6ac5b2f77bc84b0bbbb8f991413e611e HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:19:02] "GET /socket.io/?EIO=3&transport=polling&t=1498745916121-15&sid=6ac5b2f77bc84b0bbbb8f991413e611e HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:19:06] "POST /socket.io/?EIO=3&transport=polling&t=1498745946035-31&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:19:06] "GET /socket.io/?EIO=3&transport=polling&t=1498745920123-30&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:19:28] "POST /socket.io/?EIO=3&transport=polling&t=1498745968031-18&sid=6ac5b2f77bc84b0bbbb8f991413e611e HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:19:28] "GET /socket.io/?EIO=3&transport=polling&t=1498745942158-17&sid=6ac5b2f77bc84b0bbbb8f991413e611e HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:19:32] "POST /socket.io/?EIO=3&transport=polling&t=1498745972034-33&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:19:32] "GET /socket.io/?EIO=3&transport=polling&t=1498745946113-32&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:19:54] "POST /socket.io/?EIO=3&transport=polling&t=1498745994032-20&sid=6ac5b2f77bc84b0bbbb8f991413e611e HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:19:54] "GET /socket.io/?EIO=3&transport=polling&t=1498745968112-19&sid=6ac5b2f77bc84b0bbbb8f991413e611e HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:19:58] "POST /socket.io/?EIO=3&transport=polling&t=1498745998034-35&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:19:58] "GET /socket.io/?EIO=3&transport=polling&t=1498745972847-34&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:20:20] "POST /socket.io/?EIO=3&transport=polling&t=1498746020032-22&sid=6ac5b2f77bc84b0bbbb8f991413e611e HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:20:20] "GET /socket.io/?EIO=3&transport=polling&t=1498745994179-21&sid=6ac5b2f77bc84b0bbbb8f991413e611e HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:20:24] "POST /socket.io/?EIO=3&transport=polling&t=1498746024037-37&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:20:24] "GET /socket.io/?EIO=3&transport=polling&t=1498745998121-36&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:20:46] "POST /socket.io/?EIO=3&transport=polling&t=1498746046032-24&sid=6ac5b2f77bc84b0bbbb8f991413e611e HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:20:46] "GET /socket.io/?EIO=3&transport=polling&t=1498746020109-23&sid=6ac5b2f77bc84b0bbbb8f991413e611e HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:20:50] "POST /socket.io/?EIO=3&transport=polling&t=1498746050034-39&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:20:50] "GET /socket.io/?EIO=3&transport=polling&t=1498746024124-38&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:21:12] "POST /socket.io/?EIO=3&transport=polling&t=1498746072032-26&sid=6ac5b2f77bc84b0bbbb8f991413e611e HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:21:12] "GET /socket.io/?EIO=3&transport=polling&t=1498746046114-25&sid=6ac5b2f77bc84b0bbbb8f991413e611e HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:21:16] "POST /socket.io/?EIO=3&transport=polling&t=1498746076035-41&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:21:16] "GET /socket.io/?EIO=3&transport=polling&t=1498746050122-40&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:21:38] "POST /socket.io/?EIO=3&transport=polling&t=1498746098031-28&sid=6ac5b2f77bc84b0bbbb8f991413e611e HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:21:38] "GET /socket.io/?EIO=3&transport=polling&t=1498746072109-27&sid=6ac5b2f77bc84b0bbbb8f991413e611e HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:21:42] "POST /socket.io/?EIO=3&transport=polling&t=1498746102035-43&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:21:42] "GET /socket.io/?EIO=3&transport=polling&t=1498746076532-42&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:22:04] "POST /socket.io/?EIO=3&transport=polling&t=1498746124031-30&sid=6ac5b2f77bc84b0bbbb8f991413e611e HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:22:04] "GET /socket.io/?EIO=3&transport=polling&t=1498746098117-29&sid=6ac5b2f77bc84b0bbbb8f991413e611e HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:22:08] "POST /socket.io/?EIO=3&transport=polling&t=1498746128035-45&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:22:08] "GET /socket.io/?EIO=3&transport=polling&t=1498746102162-44&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:22:30] "POST /socket.io/?EIO=3&transport=polling&t=1498746150032-32&sid=6ac5b2f77bc84b0bbbb8f991413e611e HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:22:30] "GET /socket.io/?EIO=3&transport=polling&t=1498746124111-31&sid=6ac5b2f77bc84b0bbbb8f991413e611e HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:22:34] "POST /socket.io/?EIO=3&transport=polling&t=1498746154035-47&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:22:34] "GET /socket.io/?EIO=3&transport=polling&t=1498746128117-46&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:22:56] "POST /socket.io/?EIO=3&transport=polling&t=1498746176032-34&sid=6ac5b2f77bc84b0bbbb8f991413e611e HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:22:56] "GET /socket.io/?EIO=3&transport=polling&t=1498746150149-33&sid=6ac5b2f77bc84b0bbbb8f991413e611e HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:23:00] "POST /socket.io/?EIO=3&transport=polling&t=1498746180034-49&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:23:00] "GET /socket.io/?EIO=3&transport=polling&t=1498746154123-48&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:23:22] "POST /socket.io/?EIO=3&transport=polling&t=1498746202033-36&sid=6ac5b2f77bc84b0bbbb8f991413e611e HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:23:22] "GET /socket.io/?EIO=3&transport=polling&t=1498746176115-35&sid=6ac5b2f77bc84b0bbbb8f991413e611e HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:23:26] "POST /socket.io/?EIO=3&transport=polling&t=1498746206034-51&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:23:26] "GET /socket.io/?EIO=3&transport=polling&t=1498746180116-50&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:23:48] "POST /socket.io/?EIO=3&transport=polling&t=1498746228032-38&sid=6ac5b2f77bc84b0bbbb8f991413e611e HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:23:48] "GET /socket.io/?EIO=3&transport=polling&t=1498746202111-37&sid=6ac5b2f77bc84b0bbbb8f991413e611e HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:23:52] "POST /socket.io/?EIO=3&transport=polling&t=1498746232033-53&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:23:52] "GET /socket.io/?EIO=3&transport=polling&t=1498746206117-52&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:24:14] "POST /socket.io/?EIO=3&transport=polling&t=1498746254032-40&sid=6ac5b2f77bc84b0bbbb8f991413e611e HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:24:14] "GET /socket.io/?EIO=3&transport=polling&t=1498746228109-39&sid=6ac5b2f77bc84b0bbbb8f991413e611e HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:24:18] "POST /socket.io/?EIO=3&transport=polling&t=1498746258034-55&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:24:18] "GET /socket.io/?EIO=3&transport=polling&t=1498746232118-54&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:24:40] "POST /socket.io/?EIO=3&transport=polling&t=1498746280031-42&sid=6ac5b2f77bc84b0bbbb8f991413e611e HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:24:40] "GET /socket.io/?EIO=3&transport=polling&t=1498746254116-41&sid=6ac5b2f77bc84b0bbbb8f991413e611e HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:24:44] "POST /socket.io/?EIO=3&transport=polling&t=1498746284034-57&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:24:44] "GET /socket.io/?EIO=3&transport=polling&t=1498746258113-56&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:25:06] "POST /socket.io/?EIO=3&transport=polling&t=1498746306032-44&sid=6ac5b2f77bc84b0bbbb8f991413e611e HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:25:06] "GET /socket.io/?EIO=3&transport=polling&t=1498746280139-43&sid=6ac5b2f77bc84b0bbbb8f991413e611e HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:25:10] "POST /socket.io/?EIO=3&transport=polling&t=1498746310035-59&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:25:10] "GET /socket.io/?EIO=3&transport=polling&t=1498746284114-58&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:25:32] "POST /socket.io/?EIO=3&transport=polling&t=1498746332032-46&sid=6ac5b2f77bc84b0bbbb8f991413e611e HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:25:32] "GET /socket.io/?EIO=3&transport=polling&t=1498746306171-45&sid=6ac5b2f77bc84b0bbbb8f991413e611e HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:25:36] "POST /socket.io/?EIO=3&transport=polling&t=1498746336035-61&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:25:36] "GET /socket.io/?EIO=3&transport=polling&t=1498746310118-60&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:25:58] "POST /socket.io/?EIO=3&transport=polling&t=1498746358032-48&sid=6ac5b2f77bc84b0bbbb8f991413e611e HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:25:58] "GET /socket.io/?EIO=3&transport=polling&t=1498746332113-47&sid=6ac5b2f77bc84b0bbbb8f991413e611e HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:26:02] "POST /socket.io/?EIO=3&transport=polling&t=1498746362034-63&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:26:02] "GET /socket.io/?EIO=3&transport=polling&t=1498746336140-62&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:26:24] "POST /socket.io/?EIO=3&transport=polling&t=1498746384033-50&sid=6ac5b2f77bc84b0bbbb8f991413e611e HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:26:24] "GET /socket.io/?EIO=3&transport=polling&t=1498746358114-49&sid=6ac5b2f77bc84b0bbbb8f991413e611e HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:26:28] "POST /socket.io/?EIO=3&transport=polling&t=1498746388033-65&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:26:28] "GET /socket.io/?EIO=3&transport=polling&t=1498746362117-64&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:26:50] "POST /socket.io/?EIO=3&transport=polling&t=1498746410032-52&sid=6ac5b2f77bc84b0bbbb8f991413e611e HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:26:50] "GET /socket.io/?EIO=3&transport=polling&t=1498746384113-51&sid=6ac5b2f77bc84b0bbbb8f991413e611e HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:26:54] "POST /socket.io/?EIO=3&transport=polling&t=1498746414033-67&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:26:54] "GET /socket.io/?EIO=3&transport=polling&t=1498746388128-66&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:27:16] "POST /socket.io/?EIO=3&transport=polling&t=1498746436031-54&sid=6ac5b2f77bc84b0bbbb8f991413e611e HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:27:16] "GET /socket.io/?EIO=3&transport=polling&t=1498746410112-53&sid=6ac5b2f77bc84b0bbbb8f991413e611e HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:27:20] "POST /socket.io/?EIO=3&transport=polling&t=1498746440034-69&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:27:20] "GET /socket.io/?EIO=3&transport=polling&t=1498746414111-68&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:27:42] "POST /socket.io/?EIO=3&transport=polling&t=1498746462032-56&sid=6ac5b2f77bc84b0bbbb8f991413e611e HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:27:42] "GET /socket.io/?EIO=3&transport=polling&t=1498746436113-55&sid=6ac5b2f77bc84b0bbbb8f991413e611e HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:27:46] "POST /socket.io/?EIO=3&transport=polling&t=1498746466035-71&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:27:46] "GET /socket.io/?EIO=3&transport=polling&t=1498746440117-70&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:28:08] "POST /socket.io/?EIO=3&transport=polling&t=1498746488032-58&sid=6ac5b2f77bc84b0bbbb8f991413e611e HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:28:08] "GET /socket.io/?EIO=3&transport=polling&t=1498746462116-57&sid=6ac5b2f77bc84b0bbbb8f991413e611e HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:28:12] "POST /socket.io/?EIO=3&transport=polling&t=1498746492034-73&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:28:12] "GET /socket.io/?EIO=3&transport=polling&t=1498746466113-72&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:28:34] "POST /socket.io/?EIO=3&transport=polling&t=1498746514033-60&sid=6ac5b2f77bc84b0bbbb8f991413e611e HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:28:34] "GET /socket.io/?EIO=3&transport=polling&t=1498746488115-59&sid=6ac5b2f77bc84b0bbbb8f991413e611e HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:28:38] "POST /socket.io/?EIO=3&transport=polling&t=1498746518035-75&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:28:38] "GET /socket.io/?EIO=3&transport=polling&t=1498746492113-74&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:29:00] "POST /socket.io/?EIO=3&transport=polling&t=1498746540033-62&sid=6ac5b2f77bc84b0bbbb8f991413e611e HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:29:00] "GET /socket.io/?EIO=3&transport=polling&t=1498746514114-61&sid=6ac5b2f77bc84b0bbbb8f991413e611e HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:29:04] "POST /socket.io/?EIO=3&transport=polling&t=1498746544033-77&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:29:04] "GET /socket.io/?EIO=3&transport=polling&t=1498746518115-76&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:29:26] "POST /socket.io/?EIO=3&transport=polling&t=1498746566032-64&sid=6ac5b2f77bc84b0bbbb8f991413e611e HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:29:26] "GET /socket.io/?EIO=3&transport=polling&t=1498746540136-63&sid=6ac5b2f77bc84b0bbbb8f991413e611e HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:29:30] "POST /socket.io/?EIO=3&transport=polling&t=1498746570034-79&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:29:30] "GET /socket.io/?EIO=3&transport=polling&t=1498746544159-78&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:29:52] "POST /socket.io/?EIO=3&transport=polling&t=1498746592032-66&sid=6ac5b2f77bc84b0bbbb8f991413e611e HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:29:52] "GET /socket.io/?EIO=3&transport=polling&t=1498746566116-65&sid=6ac5b2f77bc84b0bbbb8f991413e611e HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:29:56] "POST /socket.io/?EIO=3&transport=polling&t=1498746596034-81&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:29:56] "GET /socket.io/?EIO=3&transport=polling&t=1498746570114-80&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:30:18] "POST /socket.io/?EIO=3&transport=polling&t=1498746618032-68&sid=6ac5b2f77bc84b0bbbb8f991413e611e HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:30:18] "GET /socket.io/?EIO=3&transport=polling&t=1498746592109-67&sid=6ac5b2f77bc84b0bbbb8f991413e611e HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:30:22] "POST /socket.io/?EIO=3&transport=polling&t=1498746622034-83&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:30:22] "GET /socket.io/?EIO=3&transport=polling&t=1498746596151-82&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:30:44] "POST /socket.io/?EIO=3&transport=polling&t=1498746644032-70&sid=6ac5b2f77bc84b0bbbb8f991413e611e HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:30:44] "GET /socket.io/?EIO=3&transport=polling&t=1498746618109-69&sid=6ac5b2f77bc84b0bbbb8f991413e611e HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:30:48] "POST /socket.io/?EIO=3&transport=polling&t=1498746648034-85&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:30:48] "GET /socket.io/?EIO=3&transport=polling&t=1498746622116-84&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:31:10] "POST /socket.io/?EIO=3&transport=polling&t=1498746670032-72&sid=6ac5b2f77bc84b0bbbb8f991413e611e HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:31:10] "GET /socket.io/?EIO=3&transport=polling&t=1498746644121-71&sid=6ac5b2f77bc84b0bbbb8f991413e611e HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:31:14] "POST /socket.io/?EIO=3&transport=polling&t=1498746674034-87&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:31:14] "GET /socket.io/?EIO=3&transport=polling&t=1498746648125-86&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:31:36] "POST /socket.io/?EIO=3&transport=polling&t=1498746696033-74&sid=6ac5b2f77bc84b0bbbb8f991413e611e HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:31:36] "GET /socket.io/?EIO=3&transport=polling&t=1498746670109-73&sid=6ac5b2f77bc84b0bbbb8f991413e611e HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:31:40] "POST /socket.io/?EIO=3&transport=polling&t=1498746700035-89&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:31:40] "GET /socket.io/?EIO=3&transport=polling&t=1498746674116-88&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:32:02] "POST /socket.io/?EIO=3&transport=polling&t=1498746722032-76&sid=6ac5b2f77bc84b0bbbb8f991413e611e HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:32:02] "GET /socket.io/?EIO=3&transport=polling&t=1498746696113-75&sid=6ac5b2f77bc84b0bbbb8f991413e611e HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:32:06] "POST /socket.io/?EIO=3&transport=polling&t=1498746726034-91&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:32:06] "GET /socket.io/?EIO=3&transport=polling&t=1498746700116-90&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:32:28] "POST /socket.io/?EIO=3&transport=polling&t=1498746748033-78&sid=6ac5b2f77bc84b0bbbb8f991413e611e HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:32:28] "GET /socket.io/?EIO=3&transport=polling&t=1498746722110-77&sid=6ac5b2f77bc84b0bbbb8f991413e611e HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:32:32] "POST /socket.io/?EIO=3&transport=polling&t=1498746752034-93&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:32:32] "GET /socket.io/?EIO=3&transport=polling&t=1498746726111-92&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:32:54] "POST /socket.io/?EIO=3&transport=polling&t=1498746774032-80&sid=6ac5b2f77bc84b0bbbb8f991413e611e HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:32:54] "GET /socket.io/?EIO=3&transport=polling&t=1498746748113-79&sid=6ac5b2f77bc84b0bbbb8f991413e611e HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:32:58] "POST /socket.io/?EIO=3&transport=polling&t=1498746778034-95&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:32:58] "GET /socket.io/?EIO=3&transport=polling&t=1498746752113-94&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:33:20] "POST /socket.io/?EIO=3&transport=polling&t=1498746800032-82&sid=6ac5b2f77bc84b0bbbb8f991413e611e HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:33:20] "GET /socket.io/?EIO=3&transport=polling&t=1498746774111-81&sid=6ac5b2f77bc84b0bbbb8f991413e611e HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:33:24] "POST /socket.io/?EIO=3&transport=polling&t=1498746804035-97&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:33:24] "GET /socket.io/?EIO=3&transport=polling&t=1498746778116-96&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:33:46] "POST /socket.io/?EIO=3&transport=polling&t=1498746826031-84&sid=6ac5b2f77bc84b0bbbb8f991413e611e HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:33:46] "GET /socket.io/?EIO=3&transport=polling&t=1498746800114-83&sid=6ac5b2f77bc84b0bbbb8f991413e611e HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:33:50] "POST /socket.io/?EIO=3&transport=polling&t=1498746830034-99&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:33:50] "GET /socket.io/?EIO=3&transport=polling&t=1498746804114-98&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:34:12] "POST /socket.io/?EIO=3&transport=polling&t=1498746852031-86&sid=6ac5b2f77bc84b0bbbb8f991413e611e HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:34:12] "GET /socket.io/?EIO=3&transport=polling&t=1498746826111-85&sid=6ac5b2f77bc84b0bbbb8f991413e611e HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:34:16] "POST /socket.io/?EIO=3&transport=polling&t=1498746856035-101&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:34:16] "GET /socket.io/?EIO=3&transport=polling&t=1498746830115-100&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:34:39] "POST /socket.io/?EIO=3&transport=polling&t=1498746878032-88&sid=6ac5b2f77bc84b0bbbb8f991413e611e HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:34:39] "GET /socket.io/?EIO=3&transport=polling&t=1498746852108-87&sid=6ac5b2f77bc84b0bbbb8f991413e611e HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:34:42] "POST /socket.io/?EIO=3&transport=polling&t=1498746882034-103&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:34:42] "GET /socket.io/?EIO=3&transport=polling&t=1498746856118-102&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:35:04] "POST /socket.io/?EIO=3&transport=polling&t=1498746904033-90&sid=6ac5b2f77bc84b0bbbb8f991413e611e HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:35:04] "GET /socket.io/?EIO=3&transport=polling&t=1498746878988-89&sid=6ac5b2f77bc84b0bbbb8f991413e611e HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:35:08] "POST /socket.io/?EIO=3&transport=polling&t=1498746908035-105&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:35:08] "GET /socket.io/?EIO=3&transport=polling&t=1498746882114-104&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:35:30] "POST /socket.io/?EIO=3&transport=polling&t=1498746930032-92&sid=6ac5b2f77bc84b0bbbb8f991413e611e HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:35:30] "GET /socket.io/?EIO=3&transport=polling&t=1498746904110-91&sid=6ac5b2f77bc84b0bbbb8f991413e611e HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:35:34] "POST /socket.io/?EIO=3&transport=polling&t=1498746934034-107&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:35:34] "GET /socket.io/?EIO=3&transport=polling&t=1498746908116-106&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:35:56] "POST /socket.io/?EIO=3&transport=polling&t=1498746956032-94&sid=6ac5b2f77bc84b0bbbb8f991413e611e HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:35:56] "GET /socket.io/?EIO=3&transport=polling&t=1498746930112-93&sid=6ac5b2f77bc84b0bbbb8f991413e611e HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:36:00] "POST /socket.io/?EIO=3&transport=polling&t=1498746960034-109&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:36:00] "GET /socket.io/?EIO=3&transport=polling&t=1498746934115-108&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:36:22] "POST /socket.io/?EIO=3&transport=polling&t=1498746982031-96&sid=6ac5b2f77bc84b0bbbb8f991413e611e HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:36:22] "GET /socket.io/?EIO=3&transport=polling&t=1498746956117-95&sid=6ac5b2f77bc84b0bbbb8f991413e611e HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:36:26] "POST /socket.io/?EIO=3&transport=polling&t=1498746986035-111&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:36:26] "GET /socket.io/?EIO=3&transport=polling&t=1498746960117-110&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:36:48] "POST /socket.io/?EIO=3&transport=polling&t=1498747008032-98&sid=6ac5b2f77bc84b0bbbb8f991413e611e HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:36:48] "GET /socket.io/?EIO=3&transport=polling&t=1498746982116-97&sid=6ac5b2f77bc84b0bbbb8f991413e611e HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:36:52] "POST /socket.io/?EIO=3&transport=polling&t=1498747012035-113&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:36:52] "GET /socket.io/?EIO=3&transport=polling&t=1498746986117-112&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:37:14] "POST /socket.io/?EIO=3&transport=polling&t=1498747034033-100&sid=6ac5b2f77bc84b0bbbb8f991413e611e HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:37:14] "GET /socket.io/?EIO=3&transport=polling&t=1498747008112-99&sid=6ac5b2f77bc84b0bbbb8f991413e611e HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:37:18] "POST /socket.io/?EIO=3&transport=polling&t=1498747038034-115&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:37:18] "GET /socket.io/?EIO=3&transport=polling&t=1498747012114-114&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:37:40] "POST /socket.io/?EIO=3&transport=polling&t=1498747060033-102&sid=6ac5b2f77bc84b0bbbb8f991413e611e HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:37:40] "GET /socket.io/?EIO=3&transport=polling&t=1498747034131-101&sid=6ac5b2f77bc84b0bbbb8f991413e611e HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:37:44] "POST /socket.io/?EIO=3&transport=polling&t=1498747064035-117&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:37:44] "GET /socket.io/?EIO=3&transport=polling&t=1498747038168-116&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:38:06] "POST /socket.io/?EIO=3&transport=polling&t=1498747086032-104&sid=6ac5b2f77bc84b0bbbb8f991413e611e HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:38:06] "GET /socket.io/?EIO=3&transport=polling&t=1498747060182-103&sid=6ac5b2f77bc84b0bbbb8f991413e611e HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:38:07] "GET /index/ HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:38:08] "GET /socket.io/?EIO=3&transport=polling&t=1498747087791-0 HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:38:08] "POST /socket.io/?EIO=3&transport=polling&t=1498747087939-1&sid=f7c37a75fe4c4a26b7125d41941874de HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:38:08] "GET /socket.io/?EIO=3&transport=polling&t=1498747087942-2&sid=f7c37a75fe4c4a26b7125d41941874de HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:38:10] "POST /socket.io/?EIO=3&transport=polling&t=1498747090034-119&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:38:10] "GET /socket.io/?EIO=3&transport=polling&t=1498747064133-118&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:38:33] "POST /socket.io/?EIO=3&transport=polling&t=1498747113031-4&sid=f7c37a75fe4c4a26b7125d41941874de HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:38:33] "GET /socket.io/?EIO=3&transport=polling&t=1498747088051-3&sid=f7c37a75fe4c4a26b7125d41941874de HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:38:36] "POST /socket.io/?EIO=3&transport=polling&t=1498747116034-121&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:38:36] "GET /socket.io/?EIO=3&transport=polling&t=1498747090146-120&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:38:59] "POST /socket.io/?EIO=3&transport=polling&t=1498747139031-6&sid=f7c37a75fe4c4a26b7125d41941874de HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:38:59] "GET /socket.io/?EIO=3&transport=polling&t=1498747113123-5&sid=f7c37a75fe4c4a26b7125d41941874de HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:39:02] "POST /socket.io/?EIO=3&transport=polling&t=1498747142036-123&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:39:02] "GET /socket.io/?EIO=3&transport=polling&t=1498747116139-122&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:39:06] "GET /socket.io/?EIO=3&transport=polling&t=1498747086164-105&sid=6ac5b2f77bc84b0bbbb8f991413e611e HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/var/www/chat/venv/lib/python3.5/site-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/flask_socketio/__init__.py", line 42, in __call__
+    start_response)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/engineio/middleware.py", line 47, in __call__
+    return self.engineio_app.handle_request(environ, start_response)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/socketio/server.py", line 353, in handle_request
+    return self.eio.handle_request(environ, start_response)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/engineio/server.py", line 268, in handle_request
+    self.disconnect(sid)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/engineio/server.py", line 202, in disconnect
+    self._get_socket(sid).close()
+  File "/var/www/chat/venv/lib/python3.5/site-packages/engineio/server.py", line 408, in _get_socket
+    raise KeyError('Session is disconnected')
+KeyError: 'Session is disconnected'
+91.214.247.253 - - [29/Jun/2017 10:39:25] "POST /socket.io/?EIO=3&transport=polling&t=1498747165031-8&sid=f7c37a75fe4c4a26b7125d41941874de HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:39:25] "GET /socket.io/?EIO=3&transport=polling&t=1498747139111-7&sid=f7c37a75fe4c4a26b7125d41941874de HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:39:28] "POST /socket.io/?EIO=3&transport=polling&t=1498747168035-125&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:39:28] "GET /socket.io/?EIO=3&transport=polling&t=1498747142110-124&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:39:51] "POST /socket.io/?EIO=3&transport=polling&t=1498747191032-10&sid=f7c37a75fe4c4a26b7125d41941874de HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:39:51] "GET /socket.io/?EIO=3&transport=polling&t=1498747165109-9&sid=f7c37a75fe4c4a26b7125d41941874de HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:39:54] "POST /socket.io/?EIO=3&transport=polling&t=1498747194034-127&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:39:54] "GET /socket.io/?EIO=3&transport=polling&t=1498747168116-126&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:40:17] "POST /socket.io/?EIO=3&transport=polling&t=1498747216116-12&sid=f7c37a75fe4c4a26b7125d41941874de HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:40:17] "GET /socket.io/?EIO=3&transport=polling&t=1498747191115-11&sid=f7c37a75fe4c4a26b7125d41941874de HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:40:20] "POST /socket.io/?EIO=3&transport=polling&t=1498747220034-129&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:40:20] "GET /socket.io/?EIO=3&transport=polling&t=1498747194118-128&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:40:43] "POST /socket.io/?EIO=3&transport=polling&t=1498747242398-14&sid=f7c37a75fe4c4a26b7125d41941874de HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:40:43] "GET /socket.io/?EIO=3&transport=polling&t=1498747217398-13&sid=f7c37a75fe4c4a26b7125d41941874de HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:40:46] "POST /socket.io/?EIO=3&transport=polling&t=1498747246033-131&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:40:46] "GET /socket.io/?EIO=3&transport=polling&t=1498747220114-130&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:41:08] "POST /socket.io/?EIO=3&transport=polling&t=1498747267482-16&sid=f7c37a75fe4c4a26b7125d41941874de HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:41:08] "GET /socket.io/?EIO=3&transport=polling&t=1498747242482-15&sid=f7c37a75fe4c4a26b7125d41941874de HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:41:12] "POST /socket.io/?EIO=3&transport=polling&t=1498747272034-133&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:41:12] "GET /socket.io/?EIO=3&transport=polling&t=1498747246109-132&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:41:32] "GET /index/ HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:41:33] "GET /socket.io/?EIO=3&transport=polling&t=1498747292676-0 HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:41:33] "POST /socket.io/?EIO=3&transport=polling&t=1498747292769-1&sid=9ef125d1847246ca85fa11d2ea40a891 HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:41:33] "GET /socket.io/?EIO=3&transport=polling&t=1498747292772-2&sid=9ef125d1847246ca85fa11d2ea40a891 HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:41:38] "POST /socket.io/?EIO=3&transport=polling&t=1498747298035-135&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:41:38] "GET /socket.io/?EIO=3&transport=polling&t=1498747272119-134&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:41:58] "POST /socket.io/?EIO=3&transport=polling&t=1498747317771-4&sid=9ef125d1847246ca85fa11d2ea40a891 HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:41:58] "GET /socket.io/?EIO=3&transport=polling&t=1498747292867-3&sid=9ef125d1847246ca85fa11d2ea40a891 HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:42:04] "POST /socket.io/?EIO=3&transport=polling&t=1498747324035-137&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:42:04] "GET /socket.io/?EIO=3&transport=polling&t=1498747298116-136&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:42:08] "GET /socket.io/?EIO=3&transport=polling&t=1498747267563-17&sid=f7c37a75fe4c4a26b7125d41941874de HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/var/www/chat/venv/lib/python3.5/site-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/flask_socketio/__init__.py", line 42, in __call__
+    start_response)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/engineio/middleware.py", line 47, in __call__
+    return self.engineio_app.handle_request(environ, start_response)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/socketio/server.py", line 353, in handle_request
+    return self.eio.handle_request(environ, start_response)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/engineio/server.py", line 268, in handle_request
+    self.disconnect(sid)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/engineio/server.py", line 202, in disconnect
+    self._get_socket(sid).close()
+  File "/var/www/chat/venv/lib/python3.5/site-packages/engineio/server.py", line 408, in _get_socket
+    raise KeyError('Session is disconnected')
+KeyError: 'Session is disconnected'
+91.214.247.253 - - [29/Jun/2017 10:42:23] "POST /socket.io/?EIO=3&transport=polling&t=1498747342854-6&sid=9ef125d1847246ca85fa11d2ea40a891 HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:42:23] "GET /socket.io/?EIO=3&transport=polling&t=1498747317853-5&sid=9ef125d1847246ca85fa11d2ea40a891 HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:42:30] "POST /socket.io/?EIO=3&transport=polling&t=1498747350034-139&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:42:30] "GET /socket.io/?EIO=3&transport=polling&t=1498747324117-138&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:42:48] "POST /socket.io/?EIO=3&transport=polling&t=1498747367933-8&sid=9ef125d1847246ca85fa11d2ea40a891 HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:42:48] "GET /socket.io/?EIO=3&transport=polling&t=1498747342933-7&sid=9ef125d1847246ca85fa11d2ea40a891 HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:42:56] "POST /socket.io/?EIO=3&transport=polling&t=1498747376034-141&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:42:56] "GET /socket.io/?EIO=3&transport=polling&t=1498747350117-140&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:43:13] "POST /socket.io/?EIO=3&transport=polling&t=1498747393025-10&sid=9ef125d1847246ca85fa11d2ea40a891 HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:43:13] "GET /socket.io/?EIO=3&transport=polling&t=1498747368025-9&sid=9ef125d1847246ca85fa11d2ea40a891 HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:43:22] "POST /socket.io/?EIO=3&transport=polling&t=1498747402033-143&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:43:22] "GET /socket.io/?EIO=3&transport=polling&t=1498747376111-142&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:43:38] "POST /socket.io/?EIO=3&transport=polling&t=1498747418120-12&sid=9ef125d1847246ca85fa11d2ea40a891 HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:43:38] "GET /socket.io/?EIO=3&transport=polling&t=1498747393119-11&sid=9ef125d1847246ca85fa11d2ea40a891 HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:43:39] "GET /index/ HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:43:40] "GET /socket.io/?EIO=3&transport=polling&t=1498747419406-0 HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:43:40] "POST /socket.io/?EIO=3&transport=polling&t=1498747419496-1&sid=b8d5dd7b9d424514b2d361eedb9b1947 HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:43:40] "GET /socket.io/?EIO=3&transport=polling&t=1498747419498-2&sid=b8d5dd7b9d424514b2d361eedb9b1947 HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:43:48] "POST /socket.io/?EIO=3&transport=polling&t=1498747428034-145&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:43:48] "GET /socket.io/?EIO=3&transport=polling&t=1498747402111-144&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:44:05] "POST /socket.io/?EIO=3&transport=polling&t=1498747444498-4&sid=b8d5dd7b9d424514b2d361eedb9b1947 HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:44:05] "GET /socket.io/?EIO=3&transport=polling&t=1498747419588-3&sid=b8d5dd7b9d424514b2d361eedb9b1947 HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:44:13] "GET /index/? HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:44:14] "GET /socket.io/?EIO=3&transport=polling&t=1498747453648-0 HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:44:14] "POST /socket.io/?EIO=3&transport=polling&t=1498747453764-1&sid=47ef121a127e46efb2a01577f1b12955 HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:44:14] "GET /socket.io/?EIO=3&transport=polling&t=1498747453766-2&sid=47ef121a127e46efb2a01577f1b12955 HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:44:14] "POST /socket.io/?EIO=3&transport=polling&t=1498747454034-147&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:44:14] "GET /socket.io/?EIO=3&transport=polling&t=1498747428116-146&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:44:19] "GET /index/? HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:44:20] "GET /socket.io/?EIO=3&transport=polling&t=1498747459569-0 HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:44:20] "POST /socket.io/?EIO=3&transport=polling&t=1498747459670-1&sid=c5eda13e195b433a846b8fc809ff49a2 HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:44:20] "GET /socket.io/?EIO=3&transport=polling&t=1498747459673-2&sid=c5eda13e195b433a846b8fc809ff49a2 HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:44:21] "GET /index/? HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:44:21] "GET /socket.io/?EIO=3&transport=polling&t=1498747461155-0 HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:44:22] "POST /socket.io/?EIO=3&transport=polling&t=1498747461383-1&sid=971a2f0aab3240e2a8ec351dad20b810 HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:44:22] "GET /socket.io/?EIO=3&transport=polling&t=1498747461384-2&sid=971a2f0aab3240e2a8ec351dad20b810 HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:44:38] "GET /socket.io/?EIO=3&transport=polling&t=1498747418203-13&sid=9ef125d1847246ca85fa11d2ea40a891 HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/var/www/chat/venv/lib/python3.5/site-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/flask_socketio/__init__.py", line 42, in __call__
+    start_response)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/engineio/middleware.py", line 47, in __call__
+    return self.engineio_app.handle_request(environ, start_response)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/socketio/server.py", line 353, in handle_request
+    return self.eio.handle_request(environ, start_response)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/engineio/server.py", line 268, in handle_request
+    self.disconnect(sid)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/engineio/server.py", line 202, in disconnect
+    self._get_socket(sid).close()
+  File "/var/www/chat/venv/lib/python3.5/site-packages/engineio/server.py", line 408, in _get_socket
+    raise KeyError('Session is disconnected')
+KeyError: 'Session is disconnected'
+91.214.247.253 - - [29/Jun/2017 10:44:40] "POST /socket.io/?EIO=3&transport=polling&t=1498747480035-149&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:44:40] "GET /socket.io/?EIO=3&transport=polling&t=1498747454125-148&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:44:47] "POST /socket.io/?EIO=3&transport=polling&t=1498747486384-4&sid=971a2f0aab3240e2a8ec351dad20b810 HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:44:47] "GET /socket.io/?EIO=3&transport=polling&t=1498747461474-3&sid=971a2f0aab3240e2a8ec351dad20b810 HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:44:51] "GET /index/? HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:44:52] "GET /socket.io/?EIO=3&transport=polling&t=1498747491581-0 HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:44:52] "POST /socket.io/?EIO=3&transport=polling&t=1498747491679-1&sid=8de439dac8e548d0b3d460dedf104956 HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:44:52] "GET /socket.io/?EIO=3&transport=polling&t=1498747491682-2&sid=8de439dac8e548d0b3d460dedf104956 HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:45:05] "GET /socket.io/?EIO=3&transport=polling&t=1498747444586-5&sid=b8d5dd7b9d424514b2d361eedb9b1947 HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/var/www/chat/venv/lib/python3.5/site-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/flask_socketio/__init__.py", line 42, in __call__
+    start_response)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/engineio/middleware.py", line 47, in __call__
+    return self.engineio_app.handle_request(environ, start_response)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/socketio/server.py", line 353, in handle_request
+    return self.eio.handle_request(environ, start_response)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/engineio/server.py", line 268, in handle_request
+    self.disconnect(sid)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/engineio/server.py", line 202, in disconnect
+    self._get_socket(sid).close()
+  File "/var/www/chat/venv/lib/python3.5/site-packages/engineio/server.py", line 408, in _get_socket
+    raise KeyError('Session is disconnected')
+KeyError: 'Session is disconnected'
+91.214.247.253 - - [29/Jun/2017 10:45:06] "POST /socket.io/?EIO=3&transport=polling&t=1498747506035-151&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:45:06] "GET /socket.io/?EIO=3&transport=polling&t=1498747480118-150&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:45:14] "GET /socket.io/?EIO=3&transport=polling&t=1498747453873-3&sid=47ef121a127e46efb2a01577f1b12955 HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/var/www/chat/venv/lib/python3.5/site-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/flask_socketio/__init__.py", line 42, in __call__
+    start_response)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/engineio/middleware.py", line 47, in __call__
+    return self.engineio_app.handle_request(environ, start_response)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/socketio/server.py", line 353, in handle_request
+    return self.eio.handle_request(environ, start_response)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/engineio/server.py", line 268, in handle_request
+    self.disconnect(sid)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/engineio/server.py", line 202, in disconnect
+    self._get_socket(sid).close()
+  File "/var/www/chat/venv/lib/python3.5/site-packages/engineio/server.py", line 408, in _get_socket
+    raise KeyError('Session is disconnected')
+KeyError: 'Session is disconnected'
+91.214.247.253 - - [29/Jun/2017 10:45:17] "POST /socket.io/?EIO=3&transport=polling&t=1498747516681-4&sid=8de439dac8e548d0b3d460dedf104956 HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:45:17] "GET /socket.io/?EIO=3&transport=polling&t=1498747491772-3&sid=8de439dac8e548d0b3d460dedf104956 HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:45:20] "GET /socket.io/?EIO=3&transport=polling&t=1498747459769-3&sid=c5eda13e195b433a846b8fc809ff49a2 HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/var/www/chat/venv/lib/python3.5/site-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/flask_socketio/__init__.py", line 42, in __call__
+    start_response)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/engineio/middleware.py", line 47, in __call__
+    return self.engineio_app.handle_request(environ, start_response)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/socketio/server.py", line 353, in handle_request
+    return self.eio.handle_request(environ, start_response)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/engineio/server.py", line 268, in handle_request
+    self.disconnect(sid)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/engineio/server.py", line 202, in disconnect
+    self._get_socket(sid).close()
+  File "/var/www/chat/venv/lib/python3.5/site-packages/engineio/server.py", line 408, in _get_socket
+    raise KeyError('Session is disconnected')
+KeyError: 'Session is disconnected'
+91.214.247.253 - - [29/Jun/2017 10:45:31] "GET /index/? HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:45:31] "GET /socket.io/?EIO=3&transport=polling&t=1498747530924-0 HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:45:31] "POST /socket.io/?EIO=3&transport=polling&t=1498747531047-1&sid=549ff88b357b43e08dab38825e9ee9ea HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:45:31] "GET /socket.io/?EIO=3&transport=polling&t=1498747531051-2&sid=549ff88b357b43e08dab38825e9ee9ea HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:45:32] "POST /socket.io/?EIO=3&transport=polling&t=1498747532034-153&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:45:32] "GET /socket.io/?EIO=3&transport=polling&t=1498747506129-152&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:45:47] "GET /socket.io/?EIO=3&transport=polling&t=1498747486468-5&sid=971a2f0aab3240e2a8ec351dad20b810 HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/var/www/chat/venv/lib/python3.5/site-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/flask_socketio/__init__.py", line 42, in __call__
+    start_response)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/engineio/middleware.py", line 47, in __call__
+    return self.engineio_app.handle_request(environ, start_response)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/socketio/server.py", line 353, in handle_request
+    return self.eio.handle_request(environ, start_response)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/engineio/server.py", line 268, in handle_request
+    self.disconnect(sid)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/engineio/server.py", line 202, in disconnect
+    self._get_socket(sid).close()
+  File "/var/www/chat/venv/lib/python3.5/site-packages/engineio/server.py", line 408, in _get_socket
+    raise KeyError('Session is disconnected')
+KeyError: 'Session is disconnected'
+91.214.247.253 - - [29/Jun/2017 10:45:57] "POST /socket.io/?EIO=3&transport=polling&t=1498747557032-4&sid=549ff88b357b43e08dab38825e9ee9ea HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:45:57] "GET /socket.io/?EIO=3&transport=polling&t=1498747531144-3&sid=549ff88b357b43e08dab38825e9ee9ea HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:45:58] "POST /socket.io/?EIO=3&transport=polling&t=1498747558034-155&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:45:58] "GET /socket.io/?EIO=3&transport=polling&t=1498747532110-154&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:46:17] "GET /socket.io/?EIO=3&transport=polling&t=1498747516770-5&sid=8de439dac8e548d0b3d460dedf104956 HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/var/www/chat/venv/lib/python3.5/site-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/flask_socketio/__init__.py", line 42, in __call__
+    start_response)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/engineio/middleware.py", line 47, in __call__
+    return self.engineio_app.handle_request(environ, start_response)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/socketio/server.py", line 353, in handle_request
+    return self.eio.handle_request(environ, start_response)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/engineio/server.py", line 268, in handle_request
+    self.disconnect(sid)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/engineio/server.py", line 202, in disconnect
+    self._get_socket(sid).close()
+  File "/var/www/chat/venv/lib/python3.5/site-packages/engineio/server.py", line 408, in _get_socket
+    raise KeyError('Session is disconnected')
+KeyError: 'Session is disconnected'
+91.214.247.253 - - [29/Jun/2017 10:46:23] "POST /socket.io/?EIO=3&transport=polling&t=1498747583033-6&sid=549ff88b357b43e08dab38825e9ee9ea HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:46:23] "GET /socket.io/?EIO=3&transport=polling&t=1498747557202-5&sid=549ff88b357b43e08dab38825e9ee9ea HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:46:24] "POST /socket.io/?EIO=3&transport=polling&t=1498747584034-157&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:46:24] "GET /socket.io/?EIO=3&transport=polling&t=1498747558115-156&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:46:49] "POST /socket.io/?EIO=3&transport=polling&t=1498747609032-8&sid=549ff88b357b43e08dab38825e9ee9ea HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:46:49] "GET /socket.io/?EIO=3&transport=polling&t=1498747583117-7&sid=549ff88b357b43e08dab38825e9ee9ea HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:46:50] "POST /socket.io/?EIO=3&transport=polling&t=1498747610034-159&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:46:50] "GET /socket.io/?EIO=3&transport=polling&t=1498747584111-158&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:47:16] "POST /socket.io/?EIO=3&transport=polling&t=1498747635032-10&sid=549ff88b357b43e08dab38825e9ee9ea HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:47:16] "GET /socket.io/?EIO=3&transport=polling&t=1498747609210-9&sid=549ff88b357b43e08dab38825e9ee9ea HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:47:16] "POST /socket.io/?EIO=3&transport=polling&t=1498747636034-161&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:47:16] "GET /socket.io/?EIO=3&transport=polling&t=1498747610172-160&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:47:41] "POST /socket.io/?EIO=3&transport=polling&t=1498747661031-12&sid=549ff88b357b43e08dab38825e9ee9ea HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:47:41] "GET /socket.io/?EIO=3&transport=polling&t=1498747635640-11&sid=549ff88b357b43e08dab38825e9ee9ea HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:47:42] "POST /socket.io/?EIO=3&transport=polling&t=1498747662034-163&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:47:42] "GET /socket.io/?EIO=3&transport=polling&t=1498747636407-162&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:48:07] "POST /socket.io/?EIO=3&transport=polling&t=1498747687032-14&sid=549ff88b357b43e08dab38825e9ee9ea HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:48:07] "GET /socket.io/?EIO=3&transport=polling&t=1498747661233-13&sid=549ff88b357b43e08dab38825e9ee9ea HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:48:08] "POST /socket.io/?EIO=3&transport=polling&t=1498747688034-165&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:48:08] "GET /socket.io/?EIO=3&transport=polling&t=1498747662212-164&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:48:12] "GET /index/? HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:48:13] "GET /socket.io/?EIO=3&transport=polling&t=1498747692778-0 HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:48:13] "POST /socket.io/?EIO=3&transport=polling&t=1498747692880-1&sid=6166925b66f04f1fa4e0f8f0627a672c HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:48:13] "GET /socket.io/?EIO=3&transport=polling&t=1498747692884-2&sid=6166925b66f04f1fa4e0f8f0627a672c HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:48:14] "GET /logout? HTTP/1.1" 301 -
+91.214.247.253 - - [29/Jun/2017 10:48:14] "GET /logout/ HTTP/1.1" 302 -
+91.214.247.253 - - [29/Jun/2017 10:48:15] "GET /login/ HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:48:20] "POST /login/ HTTP/1.1" 302 -
+91.214.247.253 - - [29/Jun/2017 10:48:20] "GET /login/Sokar HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:48:24] "POST /login/Sokar HTTP/1.1" 302 -
+91.214.247.253 - - [29/Jun/2017 10:48:24] "GET /index/ HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:48:24] "GET /socket.io/?EIO=3&transport=polling&t=1498747704131-0 HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:48:24] "POST /socket.io/?EIO=3&transport=polling&t=1498747704245-1&sid=544cd6b016484cf9b368e7d543339474 HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:48:24] "GET /socket.io/?EIO=3&transport=polling&t=1498747704248-2&sid=544cd6b016484cf9b368e7d543339474 HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:48:34] "POST /socket.io/?EIO=3&transport=polling&t=1498747714035-167&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:48:34] "GET /socket.io/?EIO=3&transport=polling&t=1498747688114-166&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:48:39] "GET /socket.io/?EIO=3&transport=polling&t=1498747687113-15&sid=549ff88b357b43e08dab38825e9ee9ea HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:48:39] "GET /socket.io/?EIO=3&transport=polling&t=1498747692995-3&sid=6166925b66f04f1fa4e0f8f0627a672c HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:48:39] "GET /socket.io/?EIO=3&transport=polling&t=1498747704341-3&sid=544cd6b016484cf9b368e7d543339474 HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:48:39] "POST /socket.io/?EIO=3&transport=polling&t=1498747718354-4&sid=544cd6b016484cf9b368e7d543339474 HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:48:40] "GET /logout/ HTTP/1.1" 302 -
+91.214.247.253 - - [29/Jun/2017 10:48:40] "GET /login/ HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:49:00] "POST /socket.io/?EIO=3&transport=polling&t=1498747740034-169&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:49:00] "GET /socket.io/?EIO=3&transport=polling&t=1498747714114-168&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:49:24] "POST /login/ HTTP/1.1" 302 -
+91.214.247.253 - - [29/Jun/2017 10:49:24] "GET /login/Sokar HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:49:26] "POST /socket.io/?EIO=3&transport=polling&t=1498747766034-171&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:49:26] "GET /socket.io/?EIO=3&transport=polling&t=1498747740115-170&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:49:29] "POST /login/Sokar HTTP/1.1" 302 -
+91.214.247.253 - - [29/Jun/2017 10:49:29] "GET /index/ HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:49:30] "GET /socket.io/?EIO=3&transport=polling&t=1498747769459-0 HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:49:30] "POST /socket.io/?EIO=3&transport=polling&t=1498747769548-1&sid=c74171578d1d4c909db1c0802e1ca5c1 HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:49:30] "GET /socket.io/?EIO=3&transport=polling&t=1498747769552-2&sid=c74171578d1d4c909db1c0802e1ca5c1 HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:49:39] "GET /socket.io/?EIO=3&transport=polling&t=1498747718474-5&sid=544cd6b016484cf9b368e7d543339474 HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/var/www/chat/venv/lib/python3.5/site-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/flask_socketio/__init__.py", line 42, in __call__
+    start_response)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/engineio/middleware.py", line 47, in __call__
+    return self.engineio_app.handle_request(environ, start_response)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/socketio/server.py", line 353, in handle_request
+    return self.eio.handle_request(environ, start_response)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/engineio/server.py", line 268, in handle_request
+    self.disconnect(sid)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/engineio/server.py", line 202, in disconnect
+    self._get_socket(sid).close()
+  File "/var/www/chat/venv/lib/python3.5/site-packages/engineio/server.py", line 408, in _get_socket
+    raise KeyError('Session is disconnected')
+KeyError: 'Session is disconnected'
+91.214.247.253 - - [29/Jun/2017 10:49:52] "POST /socket.io/?EIO=3&transport=polling&t=1498747792034-173&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:49:52] "GET /socket.io/?EIO=3&transport=polling&t=1498747766111-172&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:49:55] "POST /socket.io/?EIO=3&transport=polling&t=1498747794551-4&sid=c74171578d1d4c909db1c0802e1ca5c1 HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:49:55] "GET /socket.io/?EIO=3&transport=polling&t=1498747769664-3&sid=c74171578d1d4c909db1c0802e1ca5c1 HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:49:55] "POST /socket.io/?EIO=3&transport=polling&t=1498747794644-6&sid=c74171578d1d4c909db1c0802e1ca5c1 HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:50:18] "POST /socket.io/?EIO=3&transport=polling&t=1498747818034-175&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:50:18] "GET /socket.io/?EIO=3&transport=polling&t=1498747792112-174&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:50:20] "POST /socket.io/?EIO=3&transport=polling&t=1498747819636-7&sid=c74171578d1d4c909db1c0802e1ca5c1 HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:50:20] "GET /socket.io/?EIO=3&transport=polling&t=1498747794636-5&sid=c74171578d1d4c909db1c0802e1ca5c1 HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:50:44] "POST /socket.io/?EIO=3&transport=polling&t=1498747844034-177&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:50:44] "GET /socket.io/?EIO=3&transport=polling&t=1498747818115-176&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:50:45] "POST /socket.io/?EIO=3&transport=polling&t=1498747844721-9&sid=c74171578d1d4c909db1c0802e1ca5c1 HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:50:45] "GET /socket.io/?EIO=3&transport=polling&t=1498747819721-8&sid=c74171578d1d4c909db1c0802e1ca5c1 HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:51:10] "POST /socket.io/?EIO=3&transport=polling&t=1498747869890-11&sid=c74171578d1d4c909db1c0802e1ca5c1 HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:51:10] "GET /socket.io/?EIO=3&transport=polling&t=1498747844889-10&sid=c74171578d1d4c909db1c0802e1ca5c1 HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:51:10] "POST /socket.io/?EIO=3&transport=polling&t=1498747870035-179&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:51:10] "GET /socket.io/?EIO=3&transport=polling&t=1498747844116-178&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:51:35] "POST /socket.io/?EIO=3&transport=polling&t=1498747895012-13&sid=c74171578d1d4c909db1c0802e1ca5c1 HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:51:35] "GET /socket.io/?EIO=3&transport=polling&t=1498747870012-12&sid=c74171578d1d4c909db1c0802e1ca5c1 HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:51:36] "POST /socket.io/?EIO=3&transport=polling&t=1498747896034-181&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:51:36] "GET /socket.io/?EIO=3&transport=polling&t=1498747870234-180&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:52:00] "POST /socket.io/?EIO=3&transport=polling&t=1498747920218-15&sid=c74171578d1d4c909db1c0802e1ca5c1 HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:52:00] "GET /socket.io/?EIO=3&transport=polling&t=1498747895217-14&sid=c74171578d1d4c909db1c0802e1ca5c1 HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:52:02] "POST /socket.io/?EIO=3&transport=polling&t=1498747922035-183&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:52:02] "GET /socket.io/?EIO=3&transport=polling&t=1498747896152-182&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:52:26] "POST /socket.io/?EIO=3&transport=polling&t=1498747945426-17&sid=c74171578d1d4c909db1c0802e1ca5c1 HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:52:26] "GET /socket.io/?EIO=3&transport=polling&t=1498747920426-16&sid=c74171578d1d4c909db1c0802e1ca5c1 HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:52:28] "POST /socket.io/?EIO=3&transport=polling&t=1498747948034-185&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:52:28] "GET /socket.io/?EIO=3&transport=polling&t=1498747922213-184&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:52:58] "POST /socket.io/?EIO=3&transport=polling&t=1498747975034-188&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:52:59] "POST /socket.io/?EIO=3&transport=polling&t=1498747974233-20&sid=c74171578d1d4c909db1c0802e1ca5c1 HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:52:59] "GET /socket.io/?EIO=3&transport=polling&t=1498747976034-189 HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:52:59] "POST /socket.io/?EIO=3&transport=polling&t=1498747979208-190&sid=091813109a754e91899474f275cdef4e HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:52:59] "GET /socket.io/?EIO=3&transport=polling&t=1498747979208-191&sid=091813109a754e91899474f275cdef4e HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:53:00] "GET /socket.io/?EIO=3&transport=polling&t=1498747979415-192&sid=091813109a754e91899474f275cdef4e HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:53:01] "GET /index/ HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:53:02] "GET /socket.io/?EIO=3&transport=polling&t=1498747981547-0 HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:53:02] "POST /socket.io/?EIO=3&transport=polling&t=1498747981783-1&sid=3ca642bd39154f6580e3e610e8e15ade HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:53:02] "GET /socket.io/?EIO=3&transport=polling&t=1498747981786-2&sid=3ca642bd39154f6580e3e610e8e15ade HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:53:02] "GET /socket.io/?EIO=3&transport=polling&t=1498747981961-3&sid=3ca642bd39154f6580e3e610e8e15ade HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:53:03] "GET /socket.io/?EIO=3&transport=polling&t=1498747975499-21 HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:53:04] "POST /socket.io/?EIO=3&transport=polling&t=1498747983371-22&sid=27a0d21b45134976bd71691eefc53e7f HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:53:04] "GET /socket.io/?EIO=3&transport=polling&t=1498747983372-23&sid=27a0d21b45134976bd71691eefc53e7f HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:53:26] "GET /socket.io/?EIO=3&transport=polling&t=1498747945569-18&sid=c74171578d1d4c909db1c0802e1ca5c1 HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/var/www/chat/venv/lib/python3.5/site-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/flask_socketio/__init__.py", line 42, in __call__
+    start_response)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/engineio/middleware.py", line 47, in __call__
+    return self.engineio_app.handle_request(environ, start_response)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/socketio/server.py", line 353, in handle_request
+    return self.eio.handle_request(environ, start_response)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/engineio/server.py", line 268, in handle_request
+    self.disconnect(sid)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/engineio/server.py", line 202, in disconnect
+    self._get_socket(sid).close()
+  File "/var/www/chat/venv/lib/python3.5/site-packages/engineio/server.py", line 408, in _get_socket
+    raise KeyError('Session is disconnected')
+KeyError: 'Session is disconnected'
+91.214.247.253 - - [29/Jun/2017 10:53:27] "POST /socket.io/?EIO=3&transport=polling&t=1498748006785-5&sid=3ca642bd39154f6580e3e610e8e15ade HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:53:27] "GET /socket.io/?EIO=3&transport=polling&t=1498747982107-4&sid=3ca642bd39154f6580e3e610e8e15ade HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:53:28] "GET /socket.io/?EIO=3&transport=polling&t=1498747948279-186&sid=93078948a2bb4655a9f81804ce89bbde HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/var/www/chat/venv/lib/python3.5/site-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/flask_socketio/__init__.py", line 42, in __call__
+    start_response)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/engineio/middleware.py", line 47, in __call__
+    return self.engineio_app.handle_request(environ, start_response)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/socketio/server.py", line 353, in handle_request
+    return self.eio.handle_request(environ, start_response)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/engineio/server.py", line 268, in handle_request
+    self.disconnect(sid)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/engineio/server.py", line 202, in disconnect
+    self._get_socket(sid).close()
+  File "/var/www/chat/venv/lib/python3.5/site-packages/engineio/server.py", line 408, in _get_socket
+    raise KeyError('Session is disconnected')
+KeyError: 'Session is disconnected'
+91.214.247.253 - - [29/Jun/2017 10:53:29] "POST /socket.io/?EIO=3&transport=polling&t=1498748009031-25&sid=27a0d21b45134976bd71691eefc53e7f HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:53:29] "GET /socket.io/?EIO=3&transport=polling&t=1498747983579-24&sid=27a0d21b45134976bd71691eefc53e7f HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:53:55] "POST /socket.io/?EIO=3&transport=polling&t=1498748031912-7&sid=3ca642bd39154f6580e3e610e8e15ade HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:53:55] "GET /socket.io/?EIO=3&transport=polling&t=1498748006912-6&sid=3ca642bd39154f6580e3e610e8e15ade HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:53:55] "POST /socket.io/?EIO=3&transport=polling&t=1498748035032-27&sid=27a0d21b45134976bd71691eefc53e7f HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:53:55] "GET /socket.io/?EIO=3&transport=polling&t=1498748009110-26&sid=27a0d21b45134976bd71691eefc53e7f HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:54:00] "GET /socket.io/?EIO=3&transport=polling&t=1498747979655-193&sid=091813109a754e91899474f275cdef4e HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/var/www/chat/venv/lib/python3.5/site-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/flask_socketio/__init__.py", line 42, in __call__
+    start_response)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/engineio/middleware.py", line 47, in __call__
+    return self.engineio_app.handle_request(environ, start_response)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/socketio/server.py", line 353, in handle_request
+    return self.eio.handle_request(environ, start_response)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/engineio/server.py", line 268, in handle_request
+    self.disconnect(sid)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/engineio/server.py", line 202, in disconnect
+    self._get_socket(sid).close()
+  File "/var/www/chat/venv/lib/python3.5/site-packages/engineio/server.py", line 408, in _get_socket
+    raise KeyError('Session is disconnected')
+KeyError: 'Session is disconnected'
+91.214.247.253 - - [29/Jun/2017 10:54:20] "POST /socket.io/?EIO=3&transport=polling&t=1498748059998-9&sid=3ca642bd39154f6580e3e610e8e15ade HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:54:20] "GET /socket.io/?EIO=3&transport=polling&t=1498748034997-8&sid=3ca642bd39154f6580e3e610e8e15ade HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:54:21] "POST /socket.io/?EIO=3&transport=polling&t=1498748061032-29&sid=27a0d21b45134976bd71691eefc53e7f HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:54:21] "GET /socket.io/?EIO=3&transport=polling&t=1498748035115-28&sid=27a0d21b45134976bd71691eefc53e7f HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:54:45] "POST /socket.io/?EIO=3&transport=polling&t=1498748085074-11&sid=3ca642bd39154f6580e3e610e8e15ade HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:54:45] "GET /socket.io/?EIO=3&transport=polling&t=1498748060074-10&sid=3ca642bd39154f6580e3e610e8e15ade HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:54:46] "POST /socket.io/?EIO=3&transport=polling&t=1498748086111-31&sid=27a0d21b45134976bd71691eefc53e7f HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:54:46] "GET /socket.io/?EIO=3&transport=polling&t=1498748061111-30&sid=27a0d21b45134976bd71691eefc53e7f HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:55:10] "POST /socket.io/?EIO=3&transport=polling&t=1498748110151-13&sid=3ca642bd39154f6580e3e610e8e15ade HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:55:10] "GET /socket.io/?EIO=3&transport=polling&t=1498748085150-12&sid=3ca642bd39154f6580e3e610e8e15ade HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:55:11] "POST /socket.io/?EIO=3&transport=polling&t=1498748111192-33&sid=27a0d21b45134976bd71691eefc53e7f HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:55:11] "GET /socket.io/?EIO=3&transport=polling&t=1498748086192-32&sid=27a0d21b45134976bd71691eefc53e7f HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:55:35] "POST /socket.io/?EIO=3&transport=polling&t=1498748135303-15&sid=3ca642bd39154f6580e3e610e8e15ade HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:55:35] "GET /socket.io/?EIO=3&transport=polling&t=1498748110303-14&sid=3ca642bd39154f6580e3e610e8e15ade HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:55:37] "POST /socket.io/?EIO=3&transport=polling&t=1498748137032-35&sid=27a0d21b45134976bd71691eefc53e7f HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:55:37] "GET /socket.io/?EIO=3&transport=polling&t=1498748111324-34&sid=27a0d21b45134976bd71691eefc53e7f HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:56:01] "POST /socket.io/?EIO=3&transport=polling&t=1498748160385-17&sid=3ca642bd39154f6580e3e610e8e15ade HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:56:01] "GET /socket.io/?EIO=3&transport=polling&t=1498748135385-16&sid=3ca642bd39154f6580e3e610e8e15ade HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:56:03] "POST /socket.io/?EIO=3&transport=polling&t=1498748163032-37&sid=27a0d21b45134976bd71691eefc53e7f HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:56:03] "GET /socket.io/?EIO=3&transport=polling&t=1498748137109-36&sid=27a0d21b45134976bd71691eefc53e7f HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:56:26] "POST /socket.io/?EIO=3&transport=polling&t=1498748185463-19&sid=3ca642bd39154f6580e3e610e8e15ade HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:56:26] "GET /socket.io/?EIO=3&transport=polling&t=1498748160463-18&sid=3ca642bd39154f6580e3e610e8e15ade HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:56:29] "POST /socket.io/?EIO=3&transport=polling&t=1498748189033-39&sid=27a0d21b45134976bd71691eefc53e7f HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:56:29] "GET /socket.io/?EIO=3&transport=polling&t=1498748163116-38&sid=27a0d21b45134976bd71691eefc53e7f HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:56:51] "POST /socket.io/?EIO=3&transport=polling&t=1498748210542-21&sid=3ca642bd39154f6580e3e610e8e15ade HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:56:51] "GET /socket.io/?EIO=3&transport=polling&t=1498748185542-20&sid=3ca642bd39154f6580e3e610e8e15ade HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:56:55] "POST /socket.io/?EIO=3&transport=polling&t=1498748215032-41&sid=27a0d21b45134976bd71691eefc53e7f HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:56:55] "GET /socket.io/?EIO=3&transport=polling&t=1498748189114-40&sid=27a0d21b45134976bd71691eefc53e7f HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:57:16] "POST /socket.io/?EIO=3&transport=polling&t=1498748235625-23&sid=3ca642bd39154f6580e3e610e8e15ade HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:57:16] "GET /socket.io/?EIO=3&transport=polling&t=1498748210624-22&sid=3ca642bd39154f6580e3e610e8e15ade HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:57:21] "POST /socket.io/?EIO=3&transport=polling&t=1498748241031-43&sid=27a0d21b45134976bd71691eefc53e7f HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:57:21] "GET /socket.io/?EIO=3&transport=polling&t=1498748215119-42&sid=27a0d21b45134976bd71691eefc53e7f HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:57:41] "POST /socket.io/?EIO=3&transport=polling&t=1498748260707-25&sid=3ca642bd39154f6580e3e610e8e15ade HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:57:41] "GET /socket.io/?EIO=3&transport=polling&t=1498748235707-24&sid=3ca642bd39154f6580e3e610e8e15ade HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:57:47] "POST /socket.io/?EIO=3&transport=polling&t=1498748267031-45&sid=27a0d21b45134976bd71691eefc53e7f HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:57:47] "GET /socket.io/?EIO=3&transport=polling&t=1498748241125-44&sid=27a0d21b45134976bd71691eefc53e7f HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:58:06] "POST /socket.io/?EIO=3&transport=polling&t=1498748285789-27&sid=3ca642bd39154f6580e3e610e8e15ade HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:58:06] "GET /socket.io/?EIO=3&transport=polling&t=1498748260790-26&sid=3ca642bd39154f6580e3e610e8e15ade HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:58:13] "POST /socket.io/?EIO=3&transport=polling&t=1498748293032-47&sid=27a0d21b45134976bd71691eefc53e7f HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:58:13] "GET /socket.io/?EIO=3&transport=polling&t=1498748267113-46&sid=27a0d21b45134976bd71691eefc53e7f HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:58:31] "POST /socket.io/?EIO=3&transport=polling&t=1498748310872-29&sid=3ca642bd39154f6580e3e610e8e15ade HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:58:31] "GET /socket.io/?EIO=3&transport=polling&t=1498748285872-28&sid=3ca642bd39154f6580e3e610e8e15ade HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:58:39] "POST /socket.io/?EIO=3&transport=polling&t=1498748319033-49&sid=27a0d21b45134976bd71691eefc53e7f HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:58:39] "GET /socket.io/?EIO=3&transport=polling&t=1498748293109-48&sid=27a0d21b45134976bd71691eefc53e7f HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:58:56] "POST /socket.io/?EIO=3&transport=polling&t=1498748336004-31&sid=3ca642bd39154f6580e3e610e8e15ade HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:58:56] "GET /socket.io/?EIO=3&transport=polling&t=1498748311003-30&sid=3ca642bd39154f6580e3e610e8e15ade HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:59:05] "POST /socket.io/?EIO=3&transport=polling&t=1498748345032-51&sid=27a0d21b45134976bd71691eefc53e7f HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:59:05] "GET /socket.io/?EIO=3&transport=polling&t=1498748319115-50&sid=27a0d21b45134976bd71691eefc53e7f HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:59:21] "POST /socket.io/?EIO=3&transport=polling&t=1498748361140-33&sid=3ca642bd39154f6580e3e610e8e15ade HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:59:21] "GET /socket.io/?EIO=3&transport=polling&t=1498748336139-32&sid=3ca642bd39154f6580e3e610e8e15ade HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:59:31] "POST /socket.io/?EIO=3&transport=polling&t=1498748371032-53&sid=27a0d21b45134976bd71691eefc53e7f HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:59:31] "GET /socket.io/?EIO=3&transport=polling&t=1498748345121-52&sid=27a0d21b45134976bd71691eefc53e7f HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:59:46] "POST /socket.io/?EIO=3&transport=polling&t=1498748386218-35&sid=3ca642bd39154f6580e3e610e8e15ade HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:59:46] "GET /socket.io/?EIO=3&transport=polling&t=1498748361217-34&sid=3ca642bd39154f6580e3e610e8e15ade HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:59:57] "POST /socket.io/?EIO=3&transport=polling&t=1498748397032-55&sid=27a0d21b45134976bd71691eefc53e7f HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 10:59:57] "GET /socket.io/?EIO=3&transport=polling&t=1498748371112-54&sid=27a0d21b45134976bd71691eefc53e7f HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 11:00:11] "POST /socket.io/?EIO=3&transport=polling&t=1498748411295-37&sid=3ca642bd39154f6580e3e610e8e15ade HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 11:00:11] "GET /socket.io/?EIO=3&transport=polling&t=1498748386294-36&sid=3ca642bd39154f6580e3e610e8e15ade HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 11:00:23] "POST /socket.io/?EIO=3&transport=polling&t=1498748423032-57&sid=27a0d21b45134976bd71691eefc53e7f HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 11:00:23] "GET /socket.io/?EIO=3&transport=polling&t=1498748397113-56&sid=27a0d21b45134976bd71691eefc53e7f HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 11:00:37] "POST /socket.io/?EIO=3&transport=polling&t=1498748436373-39&sid=3ca642bd39154f6580e3e610e8e15ade HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 11:00:37] "GET /socket.io/?EIO=3&transport=polling&t=1498748411373-38&sid=3ca642bd39154f6580e3e610e8e15ade HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 11:00:50] "POST /socket.io/?EIO=3&transport=polling&t=1498748449032-59&sid=27a0d21b45134976bd71691eefc53e7f HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 11:00:50] "GET /socket.io/?EIO=3&transport=polling&t=1498748423116-58&sid=27a0d21b45134976bd71691eefc53e7f HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 11:01:02] "POST /socket.io/?EIO=3&transport=polling&t=1498748461454-41&sid=3ca642bd39154f6580e3e610e8e15ade HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 11:01:02] "GET /socket.io/?EIO=3&transport=polling&t=1498748436454-40&sid=3ca642bd39154f6580e3e610e8e15ade HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 11:01:16] "POST /socket.io/?EIO=3&transport=polling&t=1498748476032-61&sid=27a0d21b45134976bd71691eefc53e7f HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 11:01:16] "GET /socket.io/?EIO=3&transport=polling&t=1498748450109-60&sid=27a0d21b45134976bd71691eefc53e7f HTTP/1.1" 200 -
+5.254.65.180 - - [29/Jun/2017 11:01:27] "POST /socket.io/?EIO=3&transport=polling&t=1498748486529-43&sid=3ca642bd39154f6580e3e610e8e15ade HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 11:01:27] "GET /socket.io/?EIO=3&transport=polling&t=1498748461528-42&sid=3ca642bd39154f6580e3e610e8e15ade HTTP/1.1" 200 -
+5.254.65.180 - - [29/Jun/2017 11:01:43] "POST /socket.io/?EIO=3&transport=polling&t=1498748502032-63&sid=27a0d21b45134976bd71691eefc53e7f HTTP/1.1" 200 -
+91.214.247.253 - - [29/Jun/2017 11:01:43] "GET /socket.io/?EIO=3&transport=polling&t=1498748476106-62&sid=27a0d21b45134976bd71691eefc53e7f HTTP/1.1" 200 -
+5.254.65.180 - - [29/Jun/2017 11:01:53] "POST /socket.io/?EIO=3&transport=polling&t=1498748512005-45&sid=3ca642bd39154f6580e3e610e8e15ade HTTP/1.1" 200 -
+5.254.65.180 - - [29/Jun/2017 11:01:53] "GET /socket.io/?EIO=3&transport=polling&t=1498748487005-44&sid=3ca642bd39154f6580e3e610e8e15ade HTTP/1.1" 200 -
+5.254.65.180 - - [29/Jun/2017 11:02:08] "POST /socket.io/?EIO=3&transport=polling&t=1498748528032-65&sid=27a0d21b45134976bd71691eefc53e7f HTTP/1.1" 200 -
+5.254.65.180 - - [29/Jun/2017 11:02:08] "GET /socket.io/?EIO=3&transport=polling&t=1498748502448-64&sid=27a0d21b45134976bd71691eefc53e7f HTTP/1.1" 200 -
+5.254.65.180 - - [29/Jun/2017 11:02:14] "GET /index/ HTTP/1.1" 200 -
+5.254.65.180 - - [29/Jun/2017 11:02:15] "GET /socket.io/?EIO=3&transport=polling&t=1498748534700-0 HTTP/1.1" 200 -
+5.254.65.180 - - [29/Jun/2017 11:02:15] "POST /socket.io/?EIO=3&transport=polling&t=1498748534998-1&sid=bb968b260db044e9b9b66bb1aabafbf1 HTTP/1.1" 200 -
+5.254.65.180 - - [29/Jun/2017 11:02:15] "GET /socket.io/?EIO=3&transport=polling&t=1498748535000-2&sid=bb968b260db044e9b9b66bb1aabafbf1 HTTP/1.1" 200 -
+5.254.65.180 - - [29/Jun/2017 11:02:18] "POST /socket.io/?EIO=3&transport=polling&t=1498748537621-47&sid=3ca642bd39154f6580e3e610e8e15ade HTTP/1.1" 200 -
+5.254.65.180 - - [29/Jun/2017 11:02:18] "GET /socket.io/?EIO=3&transport=polling&t=1498748512621-46&sid=3ca642bd39154f6580e3e610e8e15ade HTTP/1.1" 200 -
+5.254.65.180 - - [29/Jun/2017 11:02:40] "POST /socket.io/?EIO=3&transport=polling&t=1498748560000-4&sid=bb968b260db044e9b9b66bb1aabafbf1 HTTP/1.1" 200 -
+5.254.65.180 - - [29/Jun/2017 11:02:40] "GET /socket.io/?EIO=3&transport=polling&t=1498748535508-3&sid=bb968b260db044e9b9b66bb1aabafbf1 HTTP/1.1" 200 -
+5.254.65.180 - - [29/Jun/2017 11:02:44] "POST /socket.io/?EIO=3&transport=polling&t=1498748563135-49&sid=3ca642bd39154f6580e3e610e8e15ade HTTP/1.1" 200 -
+5.254.65.180 - - [29/Jun/2017 11:02:44] "GET /socket.io/?EIO=3&transport=polling&t=1498748538134-48&sid=3ca642bd39154f6580e3e610e8e15ade HTTP/1.1" 200 -
+5.254.65.180 - - [29/Jun/2017 11:03:06] "POST /socket.io/?EIO=3&transport=polling&t=1498748586031-6&sid=bb968b260db044e9b9b66bb1aabafbf1 HTTP/1.1" 200 -
+5.254.65.180 - - [29/Jun/2017 11:03:06] "GET /socket.io/?EIO=3&transport=polling&t=1498748560670-5&sid=bb968b260db044e9b9b66bb1aabafbf1 HTTP/1.1" 200 -
+5.254.65.180 - - [29/Jun/2017 11:03:09] "GET /socket.io/?EIO=3&transport=polling&t=1498748528473-66&sid=27a0d21b45134976bd71691eefc53e7f HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/var/www/chat/venv/lib/python3.5/site-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/flask_socketio/__init__.py", line 42, in __call__
+    start_response)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/engineio/middleware.py", line 47, in __call__
+    return self.engineio_app.handle_request(environ, start_response)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/socketio/server.py", line 353, in handle_request
+    return self.eio.handle_request(environ, start_response)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/engineio/server.py", line 268, in handle_request
+    self.disconnect(sid)
+  File "/var/www/chat/venv/lib/python3.5/site-packages/engineio/server.py", line 202, in disconnect
+    self._get_socket(sid).close()
+  File "/var/www/chat/venv/lib/python3.5/site-packages/engineio/server.py", line 408, in _get_socket
+    raise KeyError('Session is disconnected')
+KeyError: 'Session is disconnected'
+5.254.65.180 - - [29/Jun/2017 11:03:10] "POST /socket.io/?EIO=3&transport=polling&t=1498748588587-51&sid=3ca642bd39154f6580e3e610e8e15ade HTTP/1.1" 200 -
+5.254.65.180 - - [29/Jun/2017 11:03:10] "GET /socket.io/?EIO=3&transport=polling&t=1498748563585-50&sid=3ca642bd39154f6580e3e610e8e15ade HTTP/1.1" 200 -
+5.254.65.180 - - [29/Jun/2017 11:03:32] "POST /socket.io/?EIO=3&transport=polling&t=1498748612031-8&sid=bb968b260db044e9b9b66bb1aabafbf1 HTTP/1.1" 200 -
+5.254.65.180 - - [29/Jun/2017 11:03:32] "GET /socket.io/?EIO=3&transport=polling&t=1498748586433-7&sid=bb968b260db044e9b9b66bb1aabafbf1 HTTP/1.1" 200 -
+5.254.65.180 - - [29/Jun/2017 11:03:36] "POST /socket.io/?EIO=3&transport=polling&t=1498748616035-53&sid=3ca642bd39154f6580e3e610e8e15ade HTTP/1.1" 200 -
+5.254.65.180 - - [29/Jun/2017 11:03:36] "GET /socket.io/?EIO=3&transport=polling&t=1498748590210-52&sid=3ca642bd39154f6580e3e610e8e15ade HTTP/1.1" 200 -
+5.254.65.180 - - [29/Jun/2017 11:03:58] "POST /socket.io/?EIO=3&transport=polling&t=1498748638031-10&sid=bb968b260db044e9b9b66bb1aabafbf1 HTTP/1.1" 200 -
+5.254.65.180 - - [29/Jun/2017 11:03:58] "GET /socket.io/?EIO=3&transport=polling&t=1498748612434-9&sid=bb968b260db044e9b9b66bb1aabafbf1 HTTP/1.1" 200 -
+5.254.65.180 - - [29/Jun/2017 11:04:02] "POST /socket.io/?EIO=3&transport=polling&t=1498748642034-55&sid=3ca642bd39154f6580e3e610e8e15ade HTTP/1.1" 200 -
+5.254.65.180 - - [29/Jun/2017 11:04:02] "GET /socket.io/?EIO=3&transport=polling&t=1498748616443-54&sid=3ca642bd39154f6580e3e610e8e15ade HTTP/1.1" 200 -
